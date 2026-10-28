@@ -38,7 +38,7 @@ qaqpm_handoff:
 | S4 | `diff_one_liner`, `competitor_types_covered: []`, `counter_argument_done: bool` |
 | S5 | `mvp_must: []`, `mvp_wont: []`, `pass_fail_criteria` |
 | S6 | `decision_tier`, `stop_loss`, `teardown_appendix_path`, `verify_calendar` |
-| S7 | `eval_goal`, `dimensions: []`, `gold_set_v0_path`, `gate_rules_draft` |
+| S7 | `eval_goal`, `dimensions: []`, `gold_set_v0_path`, `gate_rules_draft`, `storage_mode`, `eval_bitable_url`, `eval_md_mirror_path` |
 | S8 | `shared_decision_pack_frozen: bool`, `prd_dir`, `agent_spec_dir` |
 | S9 | `poc_verdict: pass\|fail\|conditional`, `tech_map_html`, `model_choice` |
 | S10 | `scope_drift: []`, `regression_eval_runs: []` |
@@ -51,3 +51,20 @@ qaqpm_handoff:
 2. `facts_confirmed` 不得被下一站改写成【推断】；若发现矛盾，标回流并退回对应站。
 3. S6 前必须：`problem_one_liner` 非空 + S2 `evidence_strength` 至少 mid（或高强一种），否则总控拦截立项。
 4. S8 写验收标准时必须引用 S7 `gate_rules_draft` / `gold_set_v0_path`，禁止空写「效果要好」。
+
+## 反同质化（强制）
+
+1. `facts_confirmed` / `inferences` **只写本站新确认或本站首次固化的条目**；跨站已有结论用 `inherits: ["S1","S5"]` 引用，禁止十余份 YAML 复读同一句底座推断。  
+2. 总控抽检：若连续 ≥3 份子文档的 `inferences` 文本重复率目测 >50%，打回重写交接区。  
+3. 声明的路径（如 `quotes_index_path`、`gold_set_v0_path`）必须真实存在，或显式写 `provisional: true` 与暂代位置。
+
+## 飞书增量字段（启用飞书协议时）
+
+| 站 | 额外字段 |
+|---|---|
+| 总控/S3/S7 | `storage_mode: local\|feishu`, `feishu_wiki_url`, `backlog_bitable_url`, `backlog_md_mirror_path`, `eval_bitable_url`, `eval_md_mirror_path` |
+| S8 | 若 `shared_decision_pack_frozen: false`，索引必须红字「决策包未冻」；禁止把 PRD 标为终稿完成 |
+
+## 已确认决策表（总控 Phase 1）
+
+长对话 / 多线程立项时，总控须先产出或更新 `research/已确认决策表.md`（列：收敛结论｜标签｜来源｜写入站）。无此表不得宣称 S1–S6 文档包已齐。

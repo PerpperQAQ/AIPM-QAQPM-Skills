@@ -50,17 +50,21 @@
 
 每份子文档末尾统一 **交接区（YAML）**，供下一站继承。
 
+## 2.1 飞书文档交付（可选）
+
+项目以飞书知识库/云文档为权威入口时，遵守 `_shared/feishu-doc-protocol.md`：**需求池与评测集必须用飞书多维表格**，本地 MD/`eval/` 为只读镜像。
+
 ## 3. 主链 12 站
 
 | # | 展示名 | Skill id | 核心问题 | 主交付物 |
 |---|---|---|---|---|
 | S1 | QAQPM-问题定义 | `qaqpm-problem-define` | 到底是什么问题？该不该用 AI？ | `01-问题定义卡.md` |
 | S2 | QAQPM-用户研究 | `qaqpm-user-research` | 谁真有、有多疼？ | `02-用户研究.md` + `research/` |
-| S3 | QAQPM-需求池 | `qaqpm-requirements-backlog` | 有哪些可能要做的事？ | `03-需求池.md` |
+| S3 | QAQPM-需求池 | `qaqpm-requirements-backlog` | 有哪些可能要做的事？ | 飞书模式：多维表格 + `03-需求池.md` 镜像；本地-only：`03-需求池.md` |
 | S4 | QAQPM-竞品分析 | `qaqpm-competitor-analysis` | 别人做了吗，凭什么是我们？ | `04-竞品分析.md` |
 | S5 | QAQPM-MVP范围 | `qaqpm-mvp-scope` | 先做哪个，第一版多小？ | `05-MVP范围.md` |
 | S6 | QAQPM-立项决策 | `qaqpm-go-nogo` | 值不值得投入？拆解结论喂决策 | `06-立项报告.md`（内含拆解模块） |
-| S7 | QAQPM-评测与测试集 | `qaqpm-eval-design` | 怎么量好坏？黄金集从哪来？ | `07-评测设计与测试集.md` + `eval/` |
+| S7 | QAQPM-评测与测试集 | `qaqpm-eval-design` | 怎么量好坏？黄金集从哪来？ | 飞书模式：评测集多维表 + `07`/`eval/` 镜像；本地-only：`07` + `eval/` |
 | S8 | QAQPM-双轨PRD | `qaqpm-prd-dual` | 怎么做、怎么算完？ | `08-PRD/` + `08-Agent规范/` |
 | S9 | QAQPM-POC选型 | `qaqpm-poc-eval` | 关键能力是否可行？链路怎么走？ | `09-POC与选型.md` + 技术链路 HTML |
 | S10 | QAQPM-开发推进 | `qaqpm-dev-track` | 如何落地并防回退？ | `10-开发推进记录.md` |
