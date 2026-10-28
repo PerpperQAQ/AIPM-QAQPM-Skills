@@ -52,7 +52,7 @@
 
 ## 2.1 飞书文档交付（可选）
 
-项目以飞书知识库/云文档为权威入口时，遵守 `_shared/feishu-doc-protocol.md`：**需求池与评测集必须用飞书多维表格**，本地 MD/`eval/` 为只读镜像。
+项目以飞书知识库/云文档为权威入口时，遵守 `_shared/feishu-doc-protocol.md`：**需求池、评测集、Bad case、功能验收用例必须用飞书多维表格**；竞品仍用文档。本地 MD/`eval/`/`dev`/`qa` 为只读镜像。
 
 ## 3. 主链 12 站
 
@@ -67,8 +67,8 @@
 | S7 | QAQPM-评测与测试集 | `qaqpm-eval-design` | 怎么量好坏？黄金集从哪来？ | 飞书模式：评测集多维表 + `07`/`eval/` 镜像；本地-only：`07` + `eval/` |
 | S8 | QAQPM-双轨PRD | `qaqpm-prd-dual` | 怎么做、怎么算完？ | `08-PRD/` + `08-Agent规范/` |
 | S9 | QAQPM-POC选型 | `qaqpm-poc-eval` | 关键能力是否可行？链路怎么走？ | `09-POC与选型.md` + 技术链路 HTML |
-| S10 | QAQPM-开发推进 | `qaqpm-dev-track` | 如何落地并防回退？ | `10-开发推进记录.md` |
-| S11 | QAQPM-验收 | `qaqpm-acceptance` | 功能通了吗，效果达标吗？ | `11-验收与评测报告.md`（执行 S7） |
+| S10 | QAQPM-开发推进 | `qaqpm-dev-track` | 如何落地并防回退？ | `10`（飞书时＋Bad case 多维表） |
+| S11 | QAQPM-验收 | `qaqpm-acceptance` | 功能通了吗，效果达标吗？ | `11`（飞书时＋功能验收用例多维表，与评测集分表） |
 | S12 | QAQPM-上线观察 | `qaqpm-launch-observe` | 灰度 / 观察 / 回流？ | `12-上线观察.md` |
 
 设计说明：无独立 S0；拆解并进 S6；原「验收与评测」拆成 **S7 设计（早）** + **S11 执行（晚）**；编号与目录文件名对齐。

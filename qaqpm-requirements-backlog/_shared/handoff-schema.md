@@ -41,8 +41,8 @@ qaqpm_handoff:
 | S7 | `eval_goal`, `dimensions: []`, `gold_set_v0_path`, `gate_rules_draft`, `storage_mode`, `eval_bitable_url`, `eval_md_mirror_path` |
 | S8 | `shared_decision_pack_frozen: bool`, `prd_dir`, `agent_spec_dir` |
 | S9 | `poc_verdict: pass\|fail\|conditional`, `tech_map_html`, `model_choice` |
-| S10 | `scope_drift: []`, `regression_eval_runs: []` |
-| S11 | `func_test_pass: bool`, `ai_eval_pass: bool`, `gate_result` |
+| S10 | `scope_drift: []`, `regression_eval_runs: []`, `bad_case_bitable_url`, `bad_case_md_mirror_path` |
+| S11 | `func_test_pass: bool`, `ai_eval_pass: bool`, `gate_result`, `func_case_bitable_url`, `func_case_md_mirror_path` |
 | S12 | `release_mode: gray\|ab\|full`, `backflow_to_backlog: []` |
 
 ## 继承规则
@@ -63,6 +63,8 @@ qaqpm_handoff:
 | 站 | 额外字段 |
 |---|---|
 | 总控/S3/S7 | `storage_mode: local\|feishu`, `feishu_wiki_url`, `backlog_bitable_url`, `backlog_md_mirror_path`, `eval_bitable_url`, `eval_md_mirror_path` |
+| S10 | `bad_case_bitable_url`, `bad_case_md_mirror_path` |
+| S11 | `func_case_bitable_url`, `func_case_md_mirror_path`（与评测集分表） |
 | S8 | 若 `shared_decision_pack_frozen: false`，索引必须红字「决策包未冻」；禁止把 PRD 标为终稿完成 |
 
 ## 已确认决策表（总控 Phase 1）

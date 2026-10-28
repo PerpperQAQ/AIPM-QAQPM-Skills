@@ -65,7 +65,7 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 - **双轨 PRD**：给人看的正式 PRD + 给编码 Agent 的规范；验收必须引用 S7。
 - **HTML**：公共报告壳；POC 技术链路为自包含交互 HTML（形态对齐 [Archify](https://github.com/tt-a1i/archify)，不整仓搬代码）。
 - **示例**：美团评测/闭环、轻颜需求池与问卷、模型 List 初筛 schema、OiiOii 权重等均为**脱敏结构示例**，见各站 `references/` 与 `_shared/examples-index.md`。
-- **飞书存储**：项目文档走飞书时，**需求池与评测集**权威载体必须是**飞书多维表格**（本地 `03-需求池.md` / `eval/` 为全字段镜像）；协议见 `_shared/feishu-doc-protocol.md`。
+- **飞书存储**：项目文档走飞书时，**需求池、评测集、Bad case、功能验收用例**权威载体必须是**飞书多维表格**（本地 MD/`eval/`/`dev`/`qa` 镜像）；**竞品分析仍用文档，不进多维表**。协议见 `_shared/feishu-doc-protocol.md`。
 
 ## 仓库内容
 
