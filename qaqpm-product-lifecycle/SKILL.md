@@ -2,12 +2,14 @@
 name: qaqpm-product-lifecycle
 description: >-
   按 QAQPM / AIPM 全流程推进 AI 产品：判断当前站、继承交接区、路由子 Skill、维护 00-项目索引与 HTML
-  报告壳。长对话须先抽「已确认决策表」；飞书存储时按 feishu-doc-protocol（需求池、评测集、Bad case、功能验收用例用多维表；竞品仍用文档）。触发词含「按 QAQPM
+  报告壳。长对话须先抽「已确认决策表」并产出立项决策一页纸；飞书存储时按 feishu-doc-protocol（需求池、评测集、Bad case、功能验收用例用多维表；竞品仍用文档）。触发词含「按 QAQPM
   流程」「从想法做到开发」「走立项」「推进到 PRD/评测/开发」。不写长篇终稿、不做简历面试诊断。
 ---
 # QAQPM-产品全流程（总控）
 
-**一句话**：需求＝用户没被解决的问题；立项＝拿证据换资源；做完 Demo ≠ 做完需求分析。（《AIPM完整流程框架》）
+> **本轮增量 Changelog 2026-10-29**：00 强制销售陪练六节开篇；Phase1 无决策表+决策一页纸不得宣称 S1–S6 齐；收尾对账 00/03/决策与 published-nodes；展示名去课件味；`_shared` 根为单一真相；产品包文风见 `_shared/product-doc-readability.md`。
+
+**一句话**：需求＝用户没被解决的问题；立项＝拿证据换资源；做完 Demo ≠ 做完需求分析。
 
 ## 1. 何时用 / 何时不用
 
@@ -16,8 +18,9 @@ description: >-
 
 ## 2. 上游依赖
 
-- 扫描项目根：`00-项目索引.md`、各 `0x-*.md`、`research/`、`eval/`、`reports/`、文末 `qaqpm_handoff` YAML。  
-- 读 `_shared/labels.md`、`handoff-schema.md`、`html-report-shell.md`、`research-methods.md`、`archify-tech-map.md`、**`feishu-doc-protocol.md`（飞书模式）**。  
+- 扫描项目根：`00-项目索引.md`、各 `0x-*.md`、`立项决策一页纸.md`、`research/`、`eval/`、`reports/`、文末交接区。  
+- 读 `_shared/labels.md`、`handoff-schema.md`、`html-report-shell.md`、`research-methods.md`、`archify-tech-map.md`、`product-doc-readability.md`、**`feishu-doc-protocol.md`（飞书模式）**。  
+- **`_shared` 单一真相**：开源仓库根 `_shared/` 为权威；改协议先改根再同步各 `qaqpm-*/_shared/`；禁止只改某一站副本。  
 - 有则继承，**禁止重复问已确认事实**。
 
 ## 3. 本站目标与通过线
@@ -25,9 +28,9 @@ description: >-
 | 目标 | 通过线 |
 |---|---|
 | 定当前站与下一站 | 用户确认或默认建议被接受 |
-| 维护索引与交接 | `00-项目索引.md` 与当前站交接区同步 |
-| 强制证据标签 | 子 Skill 产出无【事实｜推断｜待确认】则打回 |
-| 长对话决策可扫 | 存在 `research/已确认决策表.md`（见 Phase 1） |
+| 维护索引与交接 | `00` 六节开篇完整；交接含「接手后第一步」 |
+| 强制证据标签 | 子 Skill 产出无标签则打回；遵守密度规 |
+| 长对话决策可扫 | 存在 `research/已确认决策表.md` **且**人类可读「立项决策一页纸」 |
 
 ## 4. 引导流程（Phase）
 
@@ -35,19 +38,28 @@ description: >-
 1. 新项目还是续做？  
 2. 若续做：目录里已有哪些文档？你认为卡在哪？  
 3. 本轮目标：只到立项 / 到评测集 / 到 PRD / 到 POC / 到上线？  
-4. 文档落盘：本地-only 还是**飞书知识库**？（飞书 → 启用 `_shared/feishu-doc-protocol.md`；**需求池／评测集／Bad case／功能验收用例必须用多维表格**；竞品仍用文档）
+4. 文档落盘：本地-only 还是**飞书知识库**？（飞书 → 启用 feishu-doc-protocol；**四表必须用多维表格**；竞品仍用文档）
 
-### Phase 1 扫描与建议
+### Phase 1 扫描与建议（fail-closed）
 - 无索引 → 创建项目：建议 S1（或双入口见下）。  
 - 有索引 → 读 `current_station` 与 blockers。  
-- **来自长对话 / 多线程 / Codex 会话**：先抽取或更新 `research/已确认决策表.md`（列：收敛结论｜【事实｜推断｜待确认】｜来源消息/线程｜写入站）。缺执行位置、底座、不做清单、访问入口时标 blockers。**无此表不得宣称 S1–S6 文档包已齐。**  
+- **来自长对话 / 多线程 / 多会话**：  
+  1. 抽取或更新 `research/已确认决策表.md`（列：收敛结论｜【事实｜推断｜待确认】｜来源｜写入站）。  
+  2. **强制**产出／更新人类可读 **`立项决策一页纸.md`**（已决｜仍要证明；可 `frozen=false` 红字）——不只 YAML／研究表。  
+  3. 缺**执行位置、底座、不做清单、访问入口**任一项 → 标 blockers。  
+  4. **无决策表，或缺上述字段，或无一页纸 → 禁止宣称 S1–S6 文档包已齐**；允许继续补洞，但不得在索引写「S1–S6 齐／可进开发」。  
 - 给出「建议下一站」+ 备选，用户可改选。
 
 ### Phase 2 路由
-调用对应 `qaqpm-*` 子 Skill；总控不代替写长稿。飞书模式：子 Skill 交付后按协议双写并回读。
+调用对应 `qaqpm-*` 子 Skill；总控不代替写长稿。飞书模式：子 Skill 交付后按协议双写并回读。产品包文风走 `product-doc-readability.md`，**不**套 `human-writing` 散文硬禁令。
 
-### Phase 3 收尾
-更新 `00-项目索引.md`（含决策档位、**共享决策包冻结状态红绿灯**、飞书/多维表链接若有）；确认交接区无同质复读（见 handoff-schema）；问继续 / 停 / 回流。
+### Phase 3 收尾（权威对账）
+1. 更新 `00-项目索引.md`（六节开篇；决策档位；**立项决策一页纸冻结红绿灯**；飞书／多维表链接）。  
+2. **声明唯一权威根**（本地路径或飞书父节点）；`00` ↔ `published-nodes`（若有）↔ 飞书 URL **对账**。  
+3. **`03-需求池` 与立项决策一页纸必须同时存在于权威根**；冲突未评审不得标通过。  
+4. 确认交接区有人话「接手后第一步」，YAML 无同质复读。  
+5. 飞书／分享项目：检查 `reports/00-项目全景.html` 与 `reports/立项决策一页纸.html` 存在性。  
+6. 问继续 / 停 / 回流。
 
 ### 特殊分支（必须遵守）
 | 分支 | 行为 |
@@ -55,35 +67,39 @@ description: >-
 | 双入口 | 允许「先 S2 后 S1」或「先 S1 后 S2」；**S6 前两者齐** |
 | 证据为空 | 先 S2 或与 S1 交错 |
 | 技术风险高 | S5 后可插队 S9 **草案**，再回 S6 条件立项；正式 POC 仍在 S9 |
-| S6 通过后 | **默认下一站 = S7**，再 S8（评测提前备测试集） |
-| 只要拆解某产品 | S6 内拆解模块（或 S4 复用），无独立旁路 Skill |
-| 要 HTML | 走 `_shared/html-report-shell.md`；技术链路走 Archify 风格约定 |
-| 飞书存储 | 子文档按站创建；**S3/S7/S10/S11 四表＝多维表格** + 本地镜像；**竞品不用多维表** |
+| S6 通过后 | **默认下一站 = S7**，再 S8 |
+| 只要拆解某产品 | S6 内拆解模块（或 S4 复用） |
+| 要 HTML | `_shared/html-report-shell.md`；分享项目强制 00＋决策 HTML |
+| 飞书存储 | **S3/S7/S10/S11 四表＝多维表格** + 本地镜像；竞品不用多维表 |
 
 ## 5. 方法与模板库
 
-### 主链 12 站
+### 展示名去课件味（对外／00 索引用；文件名可保留站号）
 
-| # | Skill id | 展示名 | 主交付 |
+| # | Skill id | 展示名（主） | 默认文件名（可保留） |
 |---|---|---|---|
-| S1 | qaqpm-problem-define | QAQPM-问题定义 | 01-问题定义卡.md |
-| S2 | qaqpm-user-research | QAQPM-用户研究 | 02-用户研究.md + research/ |
-| S3 | qaqpm-requirements-backlog | QAQPM-需求池 | 03-需求池.md（飞书时＋多维表） |
-| S4 | qaqpm-competitor-analysis | QAQPM-竞品分析 | 04-竞品分析.md |
-| S5 | qaqpm-mvp-scope | QAQPM-MVP范围 | 05-MVP范围.md（含架构取舍表） |
-| S6 | qaqpm-go-nogo | QAQPM-立项决策 | 06-立项报告.md（含五层五问） |
-| S7 | qaqpm-eval-design | QAQPM-评测与测试集 | 07 + eval/（飞书时＋评测集多维表） |
-| S8 | qaqpm-prd-dual | QAQPM-双轨PRD | 08-PRD/ + 08-Agent规范/ |
-| S9 | qaqpm-poc-eval | QAQPM-POC选型 | 09-POC与选型.md + 09-技术链路.html |
-| S10 | qaqpm-dev-track | QAQPM-开发推进 | 10（飞书时＋Bad case 多维表） |
-| S11 | qaqpm-acceptance | QAQPM-验收 | 11（飞书时＋功能验收用例多维表，与评测集分表） |
-| S12 | qaqpm-launch-observe | QAQPM-上线观察 | 12-上线观察.md |
+| S1 | qaqpm-problem-define | 原始需求与问题定义 | 01-问题定义卡.md |
+| S2 | qaqpm-user-research | 用户研究 | 02-用户研究.md |
+| S3 | qaqpm-requirements-backlog | 需求池 | 03-需求池.md |
+| S4 | qaqpm-competitor-analysis | 竞品分析 | 04-竞品分析.md |
+| S5 | qaqpm-mvp-scope | MVP 范围与架构取舍 | 05-MVP范围.md |
+| S6 | qaqpm-go-nogo | 立项报告 | 06-立项报告.md |
+| — | （决策收敛） | **立项决策一页纸** | 立项决策一页纸.md |
+| S7 | qaqpm-eval-design | 评测设计与测试集 | 07-评测设计与测试集.md |
+| S8 | qaqpm-prd-dual | PRD（给人）／开发与接口约定 | 08-PRD/ + 08-Agent规范/ |
+| S9 | qaqpm-poc-eval | POC 与选型 | 09-POC与选型.md |
+| S10 | qaqpm-dev-track | 开发推进 | 10-开发推进记录.md |
+| S11 | qaqpm-acceptance | 验收与评测报告 | 11-验收与评测报告.md |
+| S12 | qaqpm-launch-observe | 上线观察 | 12-上线观察.md |
 
-### 项目目录树（中文文件名）
+索引与飞书标题**禁止**对外主标题仅用「卡／双轨／门禁／闭环」课件词。
+
+### 项目目录树
 
 ```
 ./
-├── 00-项目索引.md
+├── 00-项目索引.md          # 六节开篇
+├── 立项决策一页纸.md       # 已决｜仍要证明（可未冻）
 ├── 01-问题定义卡.md
 ├── 02-用户研究.md
 ├── 03-需求池.md
@@ -98,53 +114,78 @@ description: >-
 ├── 10-开发推进记录.md
 ├── 11-验收与评测报告.md
 ├── 12-上线观察.md
-├── research/   # 含 已确认决策表.md、来源与原话.md
+├── research/   # 已确认决策表.md、来源与原话.md
 ├── eval/
-└── reports/
+└── reports/    # 飞书/分享：00-项目全景.html、立项决策一页纸.html
 ```
 
-### `00-项目索引.md` 大纲
+### `00-项目索引.md` 强制六节（销售陪练语义）
+
+站序表**下沉**到第六节或附录；开篇禁止只有站序导航。
 
 ```markdown
-# 项目索引 · <短名>
-- 当前站 / 建议下一站
-- 决策档位（S6 后）：立项 | 条件立项 | 不立项 | 暂缓
-- 共享决策包：已冻 / 未冻（红字）
-- 存储：local | feishu（飞书入口；需求池／评测集／Bad case／功能验收用例多维表链接）
-- 文档清单（路径 · 状态 · 更新时间）
-- HTML 清单
-- 开放问题与 blockers（含架构取舍是否已写入 05/06/09）
-- 最近交接区摘要
+# <项目短名> · 项目全景
+
+## 1. 一眼看懂
+- 一句话产品／要解决的事
+- 当前状态黄条（如：条件立项 · 决策未冻 · 卡在访问入口）
+- 本轮目标
+
+## 2. 证据边界（红条）
+> 相关 ≠ 因果；外部经验 ≠ 本团队已量化；测算 ≠ 已上线；官方记载 ≠ 本项目已验证。
+（项目特有边界补在此）
+
+## 3. 怎么工作
+- 权威根路径／飞书父节点
+- 存储：local | feishu（四表链接）
+- 读者怎么用本包（先读一页纸 → 再下钻）
+
+## 4. 已决 vs 待证
+| 已决定 | 仍要证明／未冻 |
+|---|---|
+| … | … |
+（或链到立项决策一页纸；frozen=false 时本节顶部红字）
+
+## 5. 交接路径
+- **接手后第一步**：…
+- 建议下一站／blockers
+
+## 6. 站序与文档清单（下沉）
+- 当前站／建议下一站
+- 文档清单（路径 · 展示名 · 状态 · 更新时间）
+- HTML 清单 · published-nodes 对账
+- 开放问题（含架构取舍是否已写入 05/06/09）
 ```
 
 ## 6. 输出文档大纲
 
-总控直接产出/更新：`00-项目索引.md`、必要时 `research/已确认决策表.md`。其余由子 Skill 产出。
+总控直接产出/更新：`00-项目索引.md`、`立项决策一页纸.md`、必要时 `research/已确认决策表.md`。其余由子 Skill 产出。
 
 ## 7. 证据与标签规则
 
-全站强制 `_shared/labels.md`（含「官方记载 ≠ 本项目已验证」）。总控在路由前后抽检：无标签的关键结论 → 要求子 Skill 补标。
+全站强制 `_shared/labels.md`（含密度规与「官方记载 ≠ 本项目已验证」）。总控抽检：无标签的关键结论 → 打回；逐句堆标 → 按密度规打回。
 
 ## 8. HTML 输出约定
 
 - 公共壳：`_shared/html-report-shell.md`  
-- 技术链路：`_shared/archify-tech-map.md` + S9 骨架  
-- 拆解可视化：S6 `references/report-template.html`  
-- 触发语：「生成 HTML」「可视化报告」「技术链路 HTML」
+- **飞书／分享：强制** `reports/00-项目全景.html` + `reports/立项决策一页纸.html`  
+- 技术链路：`archify-tech-map.md` + S9  
+- 拆解可视化：S6 `references/report-template.html`
 
 ## 9. 自检清单
 
 - [ ] 已扫描目录与交接区，未重复盘问  
-- [ ] 长对话场景已有 `research/已确认决策表.md` 或已标 blocker  
+- [ ] `00` 含强制六节；站序不在开篇唯一位置  
+- [ ] 长对话：已有决策表 **且** 立项决策一页纸；缺字段未宣称 S1–S6 齐  
+- [ ] 权威根已声明；00↔published-nodes↔飞书已对账；03 与一页纸同根  
 - [ ] 建议站理由说清；S6→S7→S8 顺序未颠倒（除非用户明示并行且黄金集草案已有）  
-- [ ] 双入口时 S6 前问题卡+证据齐  
-- [ ] 飞书模式：协议已启用；S3/S7/S10/S11 四表为多维表+本地镜像；竞品不进多维表  
-- [ ] 索引含决策档位＋共享包冻结状态；HTML 清单已更新  
-- [ ] 未在总控展开长篇终稿  
+- [ ] 飞书模式：四表多维＋镜像行数；无 Untitled；回读完成  
+- [ ] 分享项目 HTML 两件套存在  
+- [ ] 索引冻结状态与一页纸一致；未在总控展开长篇终稿  
 
 ## 10. 交接区字段
 
-见 `_shared/handoff-schema.md`。总控在索引中镜像 `current_station`、`decision_tier`、`blockers`、`html_reports`、`storage_mode` / 飞书链接。
+见 `_shared/handoff-schema.md`。总控在索引中镜像 `current_station`、`decision_tier`、`blockers`、`html_reports`、`storage_mode`／飞书链接；正文必有「接手后第一步」。
 
 ## 11. 回流规则
 
@@ -155,10 +196,12 @@ description: >-
 | 资源不够 | S5 |
 | 评测门禁改指标 | S7（S11 不重开设计） |
 | 范围漂移 | S5/S8 |
+| 权威根三件套冲突 | 停在总控对账，不进下一站 |
 
 ## 明确不做
 
 - 不替代求职简历/面试诊断 Skill  
 - 不在 S1–S6 生成可运行业务代码  
 - 不把爬虫原声当成已验证用户需求  
-- 不把「文档已写入飞书」当成「四表已用多维表 / 决策已冻结」
+- 不把「文档已写入飞书」当成「四表已用多维表／决策已冻结／内容正确」  
+- 不把空壳 01–09 当成 S1–S6 已齐  
