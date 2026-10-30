@@ -7,7 +7,8 @@ description: >-
 ---
 # QAQPM-产品全流程（总控）
 
-> **本轮增量 Changelog 2026-10-29**：00 强制销售陪练六节开篇；Phase1 无决策表+决策一页纸不得宣称 S1–S6 齐；收尾对账 00/03/决策与 published-nodes；展示名去课件味；`_shared` 根为单一真相；产品包文风见 `_shared/product-doc-readability.md`。
+> **本轮增量 Changelog 2026-10-30**：`_shared/html-report-shell.md` 新增「HTML 设计限制」硬规，默认浅色网格纸 + 橙强调色。  
+> **Changelog 2026-10-29**：00 强制销售陪练六节开篇；Phase1 无决策表+决策一页纸不得宣称 S1–S6 齐；收尾对账 00/03/决策与 published-nodes；展示名去课件味；`_shared` 根为单一真相；产品包文风见 `_shared/product-doc-readability.md`。
 
 **一句话**：需求＝用户没被解决的问题；立项＝拿证据换资源；做完 Demo ≠ 做完需求分析。
 

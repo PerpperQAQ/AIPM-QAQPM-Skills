@@ -79,6 +79,7 @@
 - 不要复制 Archify 仓库源码或专有 schema 校验器整段进本 Skill  
 - 不要在 HTML 里编造 MD 未写的组件  
 - 不要把演示 HTML 当成选型证据（证据在 MD）
+- **配色遵守** `html-report-shell.md`「HTML 设计限制」（浅色网格纸 + 单一强调色；勿用青绿／霓虹青作品牌主题）
 
 
 ## RAG 主路径示例节点（高水平）
