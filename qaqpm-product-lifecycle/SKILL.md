@@ -3,7 +3,7 @@ name: qaqpm-product-lifecycle
 description: >-
   按 QAQPM / AIPM 全流程推进 AI 产品：判断当前站、继承交接区、路由子 Skill、维护 00-项目索引与 HTML
   报告壳。长对话须先抽「已确认决策表」并产出立项决策一页纸；飞书存储时按 feishu-doc-protocol（需求池、评测集、Bad case、功能验收用例用多维表；竞品仍用文档）。触发词含「按 QAQPM
-  流程」「从想法做到开发」「走立项」「推进到 PRD/评测/开发」。不写长篇终稿、不做简历面试诊断。
+  流程」「从想法做到开发」「走立项」「推进到 PRD/评测/开发」。也可单独路由「梳理会改变产品承诺的核心技术难题」。不写长篇终稿、不做简历面试诊断。
 ---
 # QAQPM-产品全流程（总控）
 
@@ -18,6 +18,8 @@ description: >-
 **不用**：纯简历/面试诊断；只要单次代码实现且无产品决策；只要拆某一竞品且明确说「只拆解」→ 仍可路由到 S6 拆解模块或 S4，但不必走满 12 站。
 
 ## 2. 上游依赖
+
+**专项入口 · 核心技术难题梳理**：用户问「除了已知难点，还有哪些技术问题我必须懂」「哪些风险会改变架构或产品承诺」时，直接使用 `$qaqpm-tech-risk-review`。从当前项目的用户动作、失败场景和证据出发，交付优先难题、取舍、最小验证与自测情境。单独咨询到此交付，跳过下述建档与站序更新；若用户正在推进整站，再将结果交回当前站。
 
 - 扫描项目根：`00-项目索引.md`、各 `0x-*.md`、`立项决策一页纸.md`、`research/`、`eval/`、`reports/`、文末交接区。  
 - 读 `_shared/labels.md`、`handoff-schema.md`、`html-report-shell.md`、`research-methods.md`、`archify-tech-map.md`、`product-doc-readability.md`、**`feishu-doc-protocol.md`（飞书模式）**。  

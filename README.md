@@ -14,6 +14,7 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 |---|---|---|
 | 总控 | [`qaqpm-product-lifecycle`](./qaqpm-product-lifecycle/) | 定当前站、路由子 Skill、维护 `00-项目索引`、HTML 壳 |
 | 主链 S1–S12 | `qaqpm-*` 各站目录 | 问题→调研→需求池→竞品→MVP→立项→**评测集**→双轨 PRD→POC→开发→验收→上线 |
+| 跨站专项 | [核心技术难题梳理](./qaqpm-tech-risk-review/SKILL.md) | 用 `$qaqpm-tech-risk-review` 找出会改变架构、首版范围或产品承诺的难题，并设计最小验证。 |
 | 公共件 | [`_shared/`](./_shared/) | 标签、交接 schema、调研菜单 A–H、HTML / Archify 约定、示例索引 |
 
 **主链顺序**

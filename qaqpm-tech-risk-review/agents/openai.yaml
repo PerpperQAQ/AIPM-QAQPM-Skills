@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAQPM · 核心技术难题梳理"
+  short_description: "从用户承诺反推必须先懂的技术难题，用具体反例、架构取舍和最小实验厘清边界"
+  default_prompt: "用 $qaqpm-tech-risk-review 结合当前项目，找出我还没想到、但会改变架构或产品承诺的技术难题，挑出最该先懂的三项。"
