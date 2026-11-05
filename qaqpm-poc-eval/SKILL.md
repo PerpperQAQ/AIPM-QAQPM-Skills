@@ -63,6 +63,12 @@ S5 关键假设与**架构取舍表**、**S7 黄金集（至少 v0）与门禁�
 - [ ] HTML 与 MD 组件一致、可离线开
 - [ ] ToB 项目写了国产化／私有化结论或【待确认】
 
+## 交给开发的技术基线
+
+按 [_shared/development-kit-protocol.md](_shared/development-kit-protocol.md) 接入 S10。除模型/底座外，列明主要终端、已有工程约束、已选技术与实际版本、验证证据、未验证项、降级方案及范围限制。固定技术选型表示记录本项目采用的基线，不强制所有项目使用同一框架。
+
+S10 在技术适配声明中引用并说明采纳/偏差，不重新开放式选型或默认改回仓库技术栈。POC 仅覆盖已测能力，不能代替产品实现和 S11 验收；失败或条件通过时写清可实施范围。需要进入完整开发时由 S10 首次询问是否拉取指定 fork；本站不因 POC 自动 clone。
+
 ## 10. 交接区
 `poc_verdict`, `tech_map_html`, `model_choice`, `backup_model`, `runtime_choice`, `access_entry`, `next_station`→S10（fail 则 S5/S6）
 

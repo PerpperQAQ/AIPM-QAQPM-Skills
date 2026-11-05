@@ -28,6 +28,17 @@ S7 门禁与黄金集（飞书模式以评测集多维表冻结视图＋本地�
 - 禁止把功能用例与黄金集混成一张多维表。
 - AI 跑分仍引用 S7 冻结视图，不在本表改题。
 
+## 开发仓库交接与发布前验收
+
+有开发接入记录时，读 [_shared/development-kit-protocol.md](_shared/development-kit-protocol.md)，核对 `dev/开发接入.md`、仓库当前阶段、候选代码/配置和原始证据。没有接入记录的已有工程也可验收，不为验收自动 clone。
+
+- 对照 S8 做功能/流程测试，对照 S7 冻结版本做 Agent 效果评测。S10 的真实冒烟、脚本自检和用户阶段验收分别是证据，不能单独替代两套验收结果。
+- 相关代码、配置、环境和标准未变且覆盖充分时引用既有结果；发生影响时重跑相关检查，不机械重复无关付费调用。记录未提交改动快照，不能只写 commit。
+- 核对共享协议第6节的冒烟失败、空前端检查、过期证据等边界；`verify.sh` 返回0不是单独的放行依据。失败/待验不得写通过，不适用附理由。
+- 报告明确“发布前准入：过/限范围/不过”及允许用途；线上部署、登录隔离、持久化、域名、埋点采集尚未实测的列为 S12 待验，不写线上已验收。
+- S11通过不自动执行部署；交 S12 在已授权目标内执行。只要求本地可用时交付本地结论与适用收尾，下一步可写结束而非强制上线。
+
+
 ## 4. 引导流程
 P0 确认门禁版本与 storage_mode → P1 **飞书模式**：建/更新功能验收用例多维表与视图并镜像 → 执行功能测试 → P2 AI 评测执行（可 AI 裁判但须校准记录）→ P3 归因（失败可回写 Bad case 表）→ P4 报告与放行建议 → P5 交接。
 
@@ -52,7 +63,7 @@ P0 确认门禁版本与 storage_mode → P1 **飞书模式**：建/更新功能
 - [ ] **若飞书模式：功能验收用例多维表已建；与评测集分表；本地镜像行数对齐；URL 入交接区**
 
 ## 10. 交接区
-`func_test_pass`, `ai_eval_pass`, `gate_result`, `storage_mode`, `func_case_bitable_url`, `func_case_md_mirror_path`, `next_station`→S12
+`func_test_pass`, `ai_eval_pass`, `gate_result`, `storage_mode`, `func_case_bitable_url`, `func_case_md_mirror_path`, `development_binding_path`, `candidate_version`, `evidence_refs`, `online_pending_checks`, `next_station`→S12（仅本地目标可结束）
 
 ## 11. 回流
 要改标准 → S7；要改实现 → S10；要缩范围 → S5。

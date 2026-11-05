@@ -76,6 +76,12 @@ S6 档位与质量门槛；S5 核心假设；S1 AI 适用性。启用飞书时�
 - [ ] 国华类项目未假装飞书 03 已有评测章
 - [ ] **若飞书模式：评测集多维表已建且有三视图；本地 eval 镜像行数对齐；URL 写入 07 与交接区**
 
+## 开发流程复用
+
+S9 选型、S10 Agent 初验/回归、S11 正式评测、S12 线上验证均引用本站同一套标准；工作流见 [_shared/development-kit-protocol.md](_shared/development-kit-protocol.md)。将 `gate_version`、`dataset_version`、`rubric_version` 与真实路径写入交接，子集记录题号和覆盖范围；没有标准时先定草案，不能由开发脚本自行判“效果好”。
+
+沿用 `eval/gold/` 与 `eval/runs/`，不在流程仓库另建一套独立黄金集。真实冒烟只证明相应链路，不能替代冻结集评测。开发中调整标准回本站留变更记录；S12 新失败先入 `eval/online/`，评审后加入新版本黄金集，不覆盖旧跑分依据。
+
 ## 10. 交接区
 `eval_goal`, `dimensions`, `gold_set_v0_path`, `gate_rules_draft`, `judge_prompt_path`, `storage_mode`, `eval_bitable_url`, `eval_md_mirror_path`, `next_station`→S8
 

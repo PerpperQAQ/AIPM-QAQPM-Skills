@@ -2,7 +2,7 @@
 
 > Changelog 2026-10-29：正文必有「接手后第一步」人话；YAML 仅附录；补正反例；虚路径须 `provisional`。  
 > 借鉴 chusimin/AIPM-Skills 的 BRD→MRD handoff；字段名中英并列。  
-> 总控与下一站**只读交接区**继承，禁止重复盘问已确认事实。
+> 总控与下一站先读交接区定位，再按当前任务读取所引用的原文、代码和证据；禁止重复盘问已确认事实，不把摘要当作实现与验收的唯一输入。
 
 ## 0. 给人读（强制，写在 YAML 之前）
 
@@ -99,3 +99,23 @@ qaqpm_handoff:
 ## 6. 已确认决策表（总控 Phase 1）
 
 长对话 / 多线程立项时，总控须先产出或更新 `research/已确认决策表.md`（列：收敛结论｜标签｜来源｜写入站），并产出人类可读 **立项决策一页纸**（可 `frozen=false`）。无决策表或缺执行位置／底座／不做／访问入口 → **禁止**宣称 S1–S6 文档包已齐。
+
+## 7. 开发流程仓库交接（S7–S12）
+
+完整操作见 [development-kit-protocol.md](development-kit-protocol.md)。以下为可选增量字段，旧交接仍可读取；缺失时从真实资料核对并补齐，不能编造，也不要求用户重做前序站。
+
+| 所属 | 增量字段与用途 |
+|---|---|
+| S7 | `gate_version`, `dataset_version`, `rubric_version`：标准、题集、评分方法版本 |
+| S8 | `requirement_refs`, `delivery_target`, `primary_client`：需求入口、交付范围、主要终端 |
+| S9 | `tech_baseline_ref`, `verified_scope`, `unverified_items`：已选技术和证据边界 |
+| S10 / 总控 | `development_binding_path`, `kit_repo_url`, `kit_baseline_commit`, `kit_root`, `kit_product_root`, `kit_stage`：来源、流程版本及真实运行位置 |
+| S10 / S11 | `candidate_version`, `evidence_refs`, `online_pending_checks`：候选实现与证据、线上仍待验项 |
+| S12 | `release_status`, `online_verification_status`, `telemetry_status`, `observation_window`：部署、线上检查、埋点和观察窗口 |
+
+- `development_binding_path` 默认指 PM 根 `dev/开发接入.md`；实际采用其他路径时填真实值。origin 固定为用户指定 fork，详见操作协议。
+- `kit_stage` 是仓库状态的镜像，不能在总控/交接中修改后当作仓库已推进。流程基线提交与业务代码版本分别记录。
+- 仓库阶段0/1对应开发接入和技术适配；2/3由S10实施；相关阶段3完成交S11；S11准入后由S12接续4/5，随后继续上线观察。
+- 保留旧 `func_test_pass` / `ai_eval_pass` 兼容字段，但 false 不区分未测和失败；正文及证据必须明确通过/失败/待验/不适用。无需用假的布尔值掩盖状态。
+- 接入授权、阶段验收、发布授权分别引用具体用户指示；不能因交接字段非空就推断已授权。
+- 开发直接入口只要求当前任务必要资料；不以缺少完整S1–S6产物否定已存在的开发证据，也不能倒推前序站已完成。

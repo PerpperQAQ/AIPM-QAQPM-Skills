@@ -90,6 +90,14 @@ P0 **填满**立项决策一页纸（已决｜待证；尝试冻结）→ P1 选
 - [ ] Agent 侧有不做清单  
 - [ ] 路径字段与真实目录/合订文件一致  
 
+## 开发就绪交接
+
+开发入口使用 [_shared/development-kit-protocol.md](_shared/development-kit-protocol.md)。交出可读取的 PRD、接口约定、功能验收项及 S7 标准引用；有稳定需求编号则沿用，没有时按当前范围建立引用，不强制重编号整份文档。
+
+补清本轮 must/wont、输入输出、状态/异常/权限、数据归属、主要终端（默认 Web，WAP 为移动适配）、性能/成本约束、交付目标及阻塞项。埋点要回答的产品问题、事件和指标口径提前定义；实现与采集验证交 S10/S12。
+
+S10 只补实施缺口，不复制第二套 PRD；开发仓库的 PRD 检查引用本文件事实。未冻结内容如实保留，条件验证不等于正式 PRD 完成。本站不自动拉取开发仓库。
+
 ## 10. 交接区
 人话「接手后第一步」＋ YAML：`shared_decision_pack_frozen`, `decision_one_pager_path`, `prd_dir` 或 `prd_path`, `agent_spec_dir` 或 `agent_spec_path`, `next_station`→S9
 
