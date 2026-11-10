@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAQPM · Agent需求"
+  short_description: "从MVP首稿到开发交接，编写任务、工具、协作与上下文需求"
+  default_prompt: "使用 $qaqpm-agent-requirements，根据现有项目资料完善本轮适用的需求与配套文档，保留来源和待验证事项。"

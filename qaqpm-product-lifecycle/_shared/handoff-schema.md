@@ -69,7 +69,7 @@ qaqpm_handoff:
 | S6 | `decision_tier`, `stop_loss`, `teardown_appendix_path`, `verify_calendar` |
 | S7 | `eval_goal`, `dimensions: []`, `gold_set_v0_path`, `gate_rules_draft`, `storage_mode`, `eval_bitable_url`, `eval_md_mirror_path` |
 | S8 | `shared_decision_pack_frozen: bool`（语义＝立项决策一页纸是否冻结）, `prd_dir` 或 `prd_path`, `agent_spec_dir` 或 `agent_spec_path`, `decision_one_pager_path` |
-| S9 | `poc_verdict: pass\|fail\|conditional`, `tech_map_html`, `model_choice` |
+| S9 | `poc_verdict: not_run\|blocked\|pass\|fail\|conditional`, `tech_map_html`, `model_choice`；旧值保持兼容，未执行不得代填条件通过 |
 | S10 | `scope_drift: []`, `regression_eval_runs: []`, `bad_case_bitable_url`, `bad_case_md_mirror_path` |
 | S11 | `func_test_pass: bool`, `ai_eval_pass: bool`, `gate_result`, `func_case_bitable_url`, `func_case_md_mirror_path` |
 | S12 | `release_mode: gray\|ab\|full`, `backflow_to_backlog: []` |
@@ -79,7 +79,7 @@ qaqpm_handoff:
 1. 下一站开场：读 `00-项目索引.md` 人话开篇 + 上一站「接手后第一步」+ 附录 YAML。  
 2. `facts_confirmed` 不得被下一站改写成【推断】；若发现矛盾，标回流并退回对应站。  
 3. S6 前必须：`problem_one_liner` 非空 + S2 `evidence_strength` 至少 mid（或高强一种），否则总控拦截立项。  
-4. S8 写验收标准时必须引用 S7 `gate_rules_draft` / `gold_set_v0_path`，禁止空写「效果要好」。
+4. S8完整AI开发交接的验收标准引用适用S7标准与题集（如`gate_rules_draft` / `gold_set_v0_path`），不能空写“效果要好”。单文档草稿引用已有依据并列具体缺口，不为补一份文档强制完成整套S7；非AI功能使用功能验收项，AI评测标不适用。
 
 ## 4. 反同质化（强制）
 
@@ -119,3 +119,19 @@ qaqpm_handoff:
 - 保留旧 `func_test_pass` / `ai_eval_pass` 兼容字段，但 false 不区分未测和失败；正文及证据必须明确通过/失败/待验/不适用。无需用假的布尔值掩盖状态。
 - 接入授权、阶段验收、发布授权分别引用具体用户指示；不能因交接字段非空就推断已授权。
 - 开发直接入口只要求当前任务必要资料；不以缺少完整S1–S6产物否定已存在的开发证据，也不能倒推前序站已完成。
+
+## 8. S5启动的AI专题与早期验证（向后兼容）
+
+规则见[ai-document-protocol.md](ai-document-protocol.md)。以下均为按需增量，旧交接保持可读；缺失时从现有资料补充，不重建项目阶段。
+
+| 字段 | 用途 |
+|---|---|
+| `ai_document_index_path` | 实际能力与文档映射位置，可是05内章节 |
+| `capability_ids` | 实际业务能力，不把编码Agent当产品Agent |
+| `document_maturity` | mvp_draft或development_ready，另保留实际评审／阻塞状态 |
+| `validation_plan_path` | 关键假设与验证安排 |
+| `eval_object_refs` | 适用对象、标准、题集、Case和分析引用 |
+| `evaluation_purpose` | feasibility / selection / iteration / acceptance / online |
+| `return_station` | 早期或单项任务完成后返回的位置，不能默认跳开发 |
+
+专题没有独立阶段号；沿用来源站并注明本次完成范围。S5可触发S7/S9最小验证，S6无需伪造已验证结论，S8继续原文件。已完成文件与计划文件区分，路径真实或明确待创建。

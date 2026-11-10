@@ -13,7 +13,7 @@ description: >-
 **不用**：问题与证据未齐（总控应拦）；已立项只写图纸 → S7/S8。
 
 ## 2. 上游依赖
-S1 问题卡 + S2 证据强度 + S5 MVP（含**架构取舍表**）+ S4 差异化；可选 S9 草案。  
+S1 问题卡 + S2 证据强度 + S5 MVP方案（含架构取舍表、适用专题首稿与关键假设）+ S4 差异化；可引用S7/S9早期验证结果或待执行计划，区分真实证据和候选方案。  
 长讨论对照 `research/已确认决策表.md`。  
 拆解时读 `references/`：`teardown-module.md`（入口）、`templates.md`、`toolkit.md`、`experience-guide.md`、`report-guide.md`、`report-template.html`、`fill_report.py`、`example-oiioii.md`。
 
@@ -103,4 +103,8 @@ next_station: "S7"   # go/conditional 默认；no-go 可停
 ```
 
 ## 11. 回流
-证据不足 → S2；范围过大 → S5；技术未知且无草案 → 插队 S9 草案后再判。
+证据不足→S2；范围过大→S5；关键技术可行性未知→S7准备相应最小设计，S9在已授权条件下验证后返回；没有执行条件则列条件、停止标准与待验证事项再判。
+
+## S5方案与早期验证的使用
+
+读取S5的AI能力清单、专题首稿、关键假设与S7/S9早期验证记录。已有真实可行性结果可以支持立项范围；未验证项形成条件与停止标准，不要求为进入S6伪造完整技术定稿。go/conditional后S7沿用已有设计与样本完善，S8继续原专题文档。见[_shared/ai-document-protocol.md](_shared/ai-document-protocol.md)。

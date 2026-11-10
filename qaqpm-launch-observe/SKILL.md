@@ -65,3 +65,9 @@ description: >-
 ## 7. 交接
 
 沿用共享交接协议，记录 `development_binding_path`（如有）、`candidate_version`、`release_status`、`online_verification_status`、`telemetry_status`、`observation_window`、`release_mode`、`evidence_refs`、`backflow_to_backlog`。下一站按原因是 S3/S7/S10/S11，定位动摇回 S1；观察数据未齐可留在 S12。
+
+## 真实用户Case与反推分析
+
+使用[用户Case与反推分析](templates/用户Case与反推分析.md)记录真实任务、行为、产物、采用与反馈；区分事实与原因推断。没有日志时只交观察设计与待采集项。问题回S3、Bad case续原表、样本经S7评审进入新题集版本。
+
+S8的埋点表和看板设计继续作为业务口径来源，本站验证真实数据与行为，不重新定义另一套指标。来源见[_shared/document-template-sources.md](_shared/document-template-sources.md)。

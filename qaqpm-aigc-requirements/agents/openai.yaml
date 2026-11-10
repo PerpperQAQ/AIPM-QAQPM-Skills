@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAQPM · AIGC需求"
+  short_description: "按实际任务与模态编写生成编辑、素材参数及产物交付需求"
+  default_prompt: "使用 $qaqpm-aigc-requirements，根据现有项目资料完善本轮适用的需求与配套文档，保留来源和待验证事项。"

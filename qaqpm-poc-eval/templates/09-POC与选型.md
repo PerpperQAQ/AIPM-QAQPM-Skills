@@ -1,5 +1,7 @@
 # 09-POC与选型 · <项目>
 
+> 先标本轮是早期可行性还是完整选型，只展开实际对象和交付范围。S5早期验证结束返回S5/S6；需要完善需求回S8，具备开发条件时才交S10。
+
 ## 关键能力与假设
 - 能力：
 - 业务失败代价：
@@ -44,7 +46,7 @@
 | | | | | | |
 
 ## 结论
-- 档位：pass / fail / conditional
+- 状态／结论：not_run / blocked / pass / fail / conditional；后面三项须有实际证据及适用范围
 - 选型建议：
 - 是否缩小 MVP：
 - 失败归因（链 S7 六步⑥）：
@@ -62,7 +64,7 @@
 - 文件：`09-技术链路.html`
 - 生成方式：骨架替换 JSON / Archify（可选）
 
-## 交给 S10 的技术基线
+## 交给 S10 的技术基线（仅开发条件具备时）
 - 主要终端 / 现有工程约束：
 - 已采用的模型、框架、运行时、存储与实际版本：
 - 已验证范围与原始证据 / 未验证项：
@@ -74,9 +76,21 @@
 ```yaml
 qaqpm_handoff:
   station: "S9"
-  poc_verdict: "conditional"
-  tech_map_html: "09-技术链路.html"
+  poc_verdict: "not_run" # 按真实执行状态与证据填写
+  tech_map_html: "" # 仅填已生成的真实路径
   model_choice: ""
   backup_model: ""
-  next_station: "S10"
+  evaluation_purpose: ""
+  return_station: ""
+  next_station: "" # 早期回S5/S6；需求细化回S8；具备开发条件时交S10
 ```
+
+## 本轮目的与专题引用
+
+- evaluation_purpose：feasibility／selection／iteration。
+- 来源站／返回站、能力／对象、主需求和当前成熟度：
+- 组件与模型比较：[模板](组件与模型选型.md)；调优实验：[模板](调优实验记录.md)。
+- 实际标准／样本／配置与run_id；覆盖限制与未验证项：
+- 早期结果对S5范围和S6投入的影响；需要回写S8的约定：
+
+原模板字段按本轮范围填；没有运行保留not_run，技术候选不冒称基线已验证。

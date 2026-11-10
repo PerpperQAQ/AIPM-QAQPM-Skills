@@ -86,3 +86,9 @@ QAQPM 提供产品目标、PRD 和评测标准；开发流程仓库提供执行�
 给 S11 的第一步：核对候选版本及接入记录，按 S7/S8 读取功能证据和 AI 评测，补齐正式验收缺口。
 
 字段沿用 `_shared/handoff-schema.md`，加 `development_binding_path`、`kit_repo_url`、`kit_baseline_commit`、`kit_root`、`kit_product_root`、`kit_stage`、`delivery_target`、`primary_client`、`evidence_refs`；保留 `scope_drift`、`regression_eval_runs`、Bad case 与飞书字段。下一站 S11，不直接触发 S12。
+
+## 专题文档与协作视图
+
+读取S8引用的同一Agent/RAG/AIGC需求及S7评测对象，沿用实际能力ID与文件，不再写一套平行需求。迭代跑测使用S7的测试Case结构，结果与配置、产物、Bad case相连。
+
+按需使用[开发排期与交接](templates/开发排期与交接.md)映射已有工程任务源；需要个人Todo、日报／周报／月报时用[工作记录与周期复盘](templates/工作记录与周期复盘.md)，从实际证据汇总，不作为阶段硬门槛。来源见[_shared/document-template-sources.md](_shared/document-template-sources.md)。
