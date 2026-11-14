@@ -48,15 +48,34 @@ def add_file(rel,data):
     dest=base/'public/source'/rel;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
     return text
 source_dirs=[p for p in source.iterdir() if p.is_dir() and (p.name=='_shared' or p.name.startswith('qaqpm-'))]
+teardown_base='qaqpm-go-nogo/references/'
+method_guides={
+ teardown_base+'teardown-module.md':'S4 / S6 拆解入口与适用范围',
+ teardown_base+'SKILL.md':'五层五问完整拆解流程',
+ teardown_base+'experience-guide.md':'产品体验脚本与证据完成标准',
+ teardown_base+'templates.md':'五层拆解配表（按范围取用）',
+ teardown_base+'toolkit.md':'技术反推与核实方法',
+ teardown_base+'report-guide.md':'可视化报告填写指南',
+ teardown_base+'example-oiioii.md':'OiiOii 历史案例（非当前实测）',
+}
+method_dependencies={teardown_base+'report-template.html',teardown_base+'fill_report.py','qaqpm-competitor-analysis/references/README.md','qaqpm-competitor-analysis/references/devil-advocate-prompt.md'}
 for p in sorted(p for directory in source_dirs for p in directory.rglob('*')):
-    if not p.is_file() or p.suffix not in ('.md','.csv'):continue
+    if not p.is_file():continue
     rel=p.relative_to(source)
+    method_path=str(rel)
+    is_method=method_path in method_guides
+    is_method_dependency=method_path in method_dependencies
+    if p.suffix not in ('.md','.csv') and not is_method_dependency:continue
     if '_shared' in rel.parts and rel.parts[0]!='_shared':continue
-    if p.name!='SKILL.md' and 'templates' not in rel.parts and rel.parts[0]!='_shared':continue
-    if p.name=='SKILL.md' and len(rel.parts)!=2:continue
+    if not (is_method or is_method_dependency):
+        if p.name!='SKILL.md' and 'templates' not in rel.parts and rel.parts[0]!='_shared':continue
+        if p.name=='SKILL.md' and len(rel.parts)!=2:continue
     text=add_file(rel,p.read_bytes())
     heading=next((x.lstrip('# ').strip() for x in text.splitlines() if x.startswith('# ')),p.stem)
-    if p.name=='SKILL.md':skills[rel.parts[0]]=text
+    if is_method:
+        resources.append({'id':method_path,'path':method_path,'skills':['qaqpm-competitor-analysis','qaqpm-go-nogo'],'skill':'qaqpm-go-nogo','title':method_guides[method_path],'heading':heading,'format':'md','kind':'method-guide'})
+    elif is_method_dependency:pass
+    elif p.name=='SKILL.md':skills[rel.parts[0]]=text
     elif 'templates' in rel.parts:
         redirect=p.name=='shared-decision-pack.md'
         kind='redirect' if redirect else 'companion' if p.suffix=='.csv' else 'independent-template'
@@ -71,6 +90,8 @@ for p in sorted(p for directory in source_dirs for p in directory.rglob('*')):
         resources.append({'id':str(rel),'path':str(rel),'skills':[rel.parts[0]],'skill':rel.parts[0],'title':p.stem,'heading':heading,'format':p.suffix[1:],'kind':kind,'depth':depth})
     elif rel.parts[0]=='_shared':
         resources.append({'id':str(rel),'path':str(rel),'skills':[],'title':heading,'heading':heading,'format':'md','kind':'shared-rule'})
+method_order={path:index for index,path in enumerate(method_guides)}
+resources=[r for r in resources if r['kind']!='method-guide']+sorted((r for r in resources if r['kind']=='method-guide'),key=lambda r:method_order[r['path']])
 for skill,text in skills.items():
     section=outline_sections[skill.removeprefix('qaqpm-')]
     assert section in text, (skill,section)
@@ -85,7 +106,7 @@ for name in ['README.md','ARCHITECTURE.md','LICENSE']:
     data=(release/name).read_bytes()
     add_file(Path(name),data)
 visible=[r for r in resources if r['kind']!='redirect']
-counts={kind:sum(r['kind']==kind for r in resources) for kind in ['independent-template','outline','shared-rule','companion','redirect']}
+counts={kind:sum(r['kind']==kind for r in resources) for kind in ['independent-template','outline','shared-rule','method-guide','companion','redirect']}
 counts['outline-skeleton']=sum(r.get('depth')=='outline-skeleton' for r in resources)
 counts['field-template']=sum(r.get('depth')=='field-template' for r in resources)
 snapshot_hash=hashlib.sha256(json.dumps(sorted((p,m['sha256']) for p,m in source_meta.items()),ensure_ascii=False).encode()).hexdigest()

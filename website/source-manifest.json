@@ -1,14 +1,15 @@
 {
   "snapshot": {
-    "id": "0c5b14dce1c9",
-    "sha256": "0c5b14dce1c929e726aad5ca1a7c5f5c5792e4ee7bfb4cb0b7e69a09f16b218d",
-    "local_revision_count": 0
+    "id": "ed8cb25e9df0",
+    "sha256": "ed8cb25e9df06e4525e7554c6e4e4b5058bdbc651d0d7b800911c93190daa7f2",
+    "local_revision_count": 33
   },
-  "base_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a",
+  "base_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520",
   "counts": {
     "independent-template": 84,
     "outline": 17,
     "shared-rule": 13,
+    "method-guide": 7,
     "companion": 1,
     "redirect": 1,
     "outline-skeleton": 16,
@@ -19,715 +20,781 @@
       "path": "_shared/ai-document-protocol.md",
       "sha256": "a299a7f52b5f6cf4919fdd292d97b333b06138dea04737a643a83d3bddeee836",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/archify-tech-map.md",
       "sha256": "138bf4cd8e5aaf8089d04ab6995558175629f7208df320514ecba27ca1b3b86f",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/development-kit-protocol.md",
       "sha256": "338649b1f7621afaa0ab374b27fff8f1ae7d366307e171688c898bd48968c429",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/document-resource-guide.md",
-      "sha256": "10e897f4735df2a58c78084ce13ef63f827a3848a80dca3580f4795da8183548",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "sha256": "349a18ef5a51ecf504da5e9d2aaaecb27ea3762d99d6ff868cbd36eec398eda1",
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "_shared/document-template-sources.md",
       "sha256": "aeccd6497bbc6d65c5155f327e1bc5d075b973f70fbcbff91f87115dee235383",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "_shared/examples-index.md",
       "sha256": "0c439f4c349240e030804e66aef898b244621af493d2dfaccde6f4a147b5dea4",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/feishu-doc-protocol.md",
       "sha256": "e2fd48881c9cdc7ee7339b108cdfd3d11e5b3e535ea4e8bab025c2e8708d5cd5",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "_shared/handoff-schema.md",
-      "sha256": "1b257b32464d3112dd2222d9d3e5e3ff5ba7249d029dc2e0c5f684e5d902968d",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "sha256": "80ef68c6f3c14d01a67de93acaec3a234d85a2d6059e95a1b6ed3dd862965f5a",
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "_shared/html-report-shell.md",
       "sha256": "94bf6fa4452aedc10ea24d93be600e6765ade8fd700743c6049d8bf27cf644f2",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/interview-maps.md",
       "sha256": "00efe2c5ccc40047e0f3a130222ceddc6cb0911866025bfa5ffaffd1e479bd0a",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/labels.md",
       "sha256": "e395e3fd2de6cdf452cf6aa52f9662281d36b2db32429e539192ccb4a37a0025",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/product-doc-readability.md",
       "sha256": "eef36345c2092653bb0f18dd2c9712a919ebeb7f8e56058f4282a240931d68f2",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "_shared/research-methods.md",
       "sha256": "8df545a5fc937b8456b9604bb7c37a064de8d2db9583e92dabba359ec0c00f26",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-acceptance/SKILL.md",
       "sha256": "302d694e94528a5dee28ed6c72872d3cfdd0aa737b862d5526c337cc6370b8f0",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-acceptance/templates/11-验收与评测报告.md",
       "sha256": "abf7d0b68c07983a685b360347a926d5253d06b0de14768d5ccd71ba6a1eba52",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-agent-requirements/SKILL.md",
       "sha256": "54df0f45b1cee248a6fe6d4bb4e2413775ac84236313145763c1bc33e9759668",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-agent-requirements/templates/Agent需求.md",
       "sha256": "3989bfd50c923a6299c7acd25717aa9d9c5facd902d43ea538c299e5978701f1",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-agent-requirements/templates/Prompt与上下文.md",
       "sha256": "5a2ff08bdab543c7d0b8844a920746183e04213ac734e3d6fb2db5945f09edd2",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-agent-requirements/templates/Tool-List.md",
       "sha256": "80b8579100005697b5008d511e5234d4f79689baa1e95637732d7055f84ac218",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-agent-requirements/templates/节点与协作.md",
       "sha256": "d337b935014cafa26107c54122a380d191de91c8a5591aa04cec62bf4c0aa2b7",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-aigc-requirements/SKILL.md",
       "sha256": "004e69e69597545ccc4d2bd71c864399195974d59c5deda1cdebc4842cf704ab",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-aigc-requirements/templates/AIGC需求.md",
       "sha256": "b7d8d1b427783ed831469cad0e1182a7efd075be4be9376eb107d51af7320701",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-aigc-requirements/templates/Prompt素材与参数.md",
       "sha256": "77bb1a83bf2b75dc521ed354b5758e3fd946b427dd048413b599f7b5fc50185d",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-aigc-requirements/templates/任务与模态矩阵.md",
       "sha256": "1a8563e81180fa0860a17f209fa7381f9a9371521b9929f8740469e6a7fd7629",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-aigc-requirements/templates/生成与编辑流程.md",
       "sha256": "f63c159ffa368ee42da37476de76277b408e3734feb7047a3c6058a25621a0d1",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-competitor-analysis/SKILL.md",
-      "sha256": "0607699da4a568124bef9eb5049ccf8fa93418e681c771ee307e5f7f970cd13f",
+      "sha256": "7265b8bee281f618a444db235016fbd215111d355dead9b2b9d05e75d95dffc7",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-competitor-analysis/references/README.md",
+      "sha256": "fc86838a8eff4236c3517442c3b180d16eba0ff6661a5f7c1bd160d5c375ff4a",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-competitor-analysis/references/devil-advocate-prompt.md",
+      "sha256": "ca0b52a98fde0006d09129ec1174454f2ea7e0fbcef16110f6411704801d5e48",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-competitor-analysis/templates/04-竞品分析.md",
-      "sha256": "dd43422b32f31e1691c82988f977814bfc945cb0acb49412da5f63e7689d3c6b",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "sha256": "c72edf3011e40b8201ef2fd4debf98c6d21a6ba4186163e46031889e6e0c07f2",
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-competitor-analysis/templates/功能分析报告.md",
-      "sha256": "198865408bab404c8e90abc9a5025b91b3906b3f80c045d1627c9816da03912d",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "sha256": "4c70abda83687e1452d774de0e92a4875381960a603d91c2ef14158bdf9824a6",
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-dev-track/SKILL.md",
       "sha256": "62ef60f1f804309e149eddf5172ba0ccec24a7009ea4d2da205214d80ff8ccc5",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-dev-track/templates/10-开发推进记录.md",
       "sha256": "cb909470e8b209848d290e2fa4eb2fade0af58811f027cb5deba9ebb8a921b35",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-dev-track/templates/Bad-case记录.md",
       "sha256": "29e178cc870a2e23c7f26730ed942030e41bc7f35db9f985eff8da4918236922",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-dev-track/templates/工作记录与周期复盘.md",
       "sha256": "0c403c27fe1cd149d48dbdc414ba0ec9792ee15e1e295aedfa0d0a866095385c",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-dev-track/templates/开发排期与交接.md",
       "sha256": "c1b97afe191f8107795ff3c3bc4387126bdd394f79de0618a818a3397863a913",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-dev-track/templates/开发接入.md",
       "sha256": "d1b04c72343fcefbc463ab87685ac717be894d20fda3fcd8142d1d33fbbce288",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/SKILL.md",
       "sha256": "daff256bb4c2a9ee34f590b25fa80475709ec7385a085fed4323277dcac51679",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/07-评测设计与测试集.md",
       "sha256": "5065b17cf966d67ab490fb0d91f9862e3fe40bac07b21232a59d5b6d59d6329c",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-eval-design/templates/eval-item.md",
       "sha256": "351b47864a7a70ad88d9af689609c7c9b3c7545dfcfbaaa164ddcfe53f631d27",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/测试Case记录.csv",
       "sha256": "5950b97ef49cc45f532bc8084c37c4ea7de3e306f564746d512ae49091575078",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/测试Case记录.md",
       "sha256": "540b9302b91c860a562f20521b6a4fbd44b339ceb17f5be051241aa2472fd53d",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/评测对象与材料映射.md",
       "sha256": "7cfe1e9ccafc8c6678b5a0e53352ec13658fb3d6e63d2ab9ecc5db55ecc59221",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/评测报告.md",
       "sha256": "1651be959b7cda416c16831ab1140a4fa35b6efa5de4272f4665372b4426c33d",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/评测方案.md",
       "sha256": "5d715a3aef8bcd6731c3178ffc2bbf82ea7ba97442e0d3e8ff5f7892ce04c4f4",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/评测标准.md",
       "sha256": "6d6c152fa9c782ca86c50c03e154d02e70d09bb06cb914612a227809342309ba",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-eval-design/templates/评测集.md",
       "sha256": "f994b5c16f203d65f5eeff7a2ceab708f94ee10eb0905fab2cb6010ebde40b2f",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-go-nogo/SKILL.md",
       "sha256": "2b403cc9ef4b69052308fce47bffec0ac452d4b26659be66953b8d54e738df7b",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
+    },
+    {
+      "path": "qaqpm-go-nogo/references/SKILL.md",
+      "sha256": "18738d3bdb3e9ccd3716188919c7dea1f3f9949c12ca6069cccbab87c63c6946",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/example-oiioii.md",
+      "sha256": "fc31433777d15e6c5006288446ed971509d7a418229e20a9949d24f079451fc6",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/experience-guide.md",
+      "sha256": "275d8e3abcb5fbc6f989225dcf0efb4c62d405f69a878edeaf9abe3d967fdcb8",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/fill_report.py",
+      "sha256": "4d748ea6332e68b7bd54683ee37f31e45c3f55b0e172129cfaf5504e2defb7eb",
+      "publication": "published",
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
+    },
+    {
+      "path": "qaqpm-go-nogo/references/report-guide.md",
+      "sha256": "4d438141ca03618084ef5b29d7ed613c85d95405c5b30e92de5cb726a0657418",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/report-template.html",
+      "sha256": "dae60739ca90f6bbc53b6444250279e5b9a1d50bd489e3fd90e6495a9c202e64",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/teardown-module.md",
+      "sha256": "f81659c6ba9816e436741fe0e864001ddc4da2a53b69186cff27873e144abdfa",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/templates.md",
+      "sha256": "67d66a0f493aef4177eb25bf67d8523f3ee3272b0571b7f40c3680cb7e1f250d",
+      "publication": "local-revision",
+      "published_commit": null
+    },
+    {
+      "path": "qaqpm-go-nogo/references/toolkit.md",
+      "sha256": "c9d7ae19de119ad0acdc96824aebff980b3f5fb92946de4709d10f0683448fbf",
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-go-nogo/templates/06-立项报告.md",
       "sha256": "afee39d2ef33eeb5b6b1ae71e7350e18699a5ac64220b27a847b3890e48503dd",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-go-nogo/templates/决策矩阵.md",
       "sha256": "ea23870a29366c3175290b1a94bdf8cc9aae1a04b8294399d70e608002f3c0e1",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-launch-observe/SKILL.md",
       "sha256": "eea0f3d7988d4fea8ce4616c6efc002e25045b0af8187ae02852f525a178fd6b",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-launch-observe/templates/12-上线观察.md",
       "sha256": "1d822686842ea4bb20fb84ae357ef14dbf6a070363716212dc9ee4a63760a5a7",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-launch-observe/templates/用户Case与反推分析.md",
       "sha256": "9b4d6ee0e2befdac4582b72e6e2cb9b4b286395c950ed1849c36772a870e2dbf",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-mvp-scope/SKILL.md",
       "sha256": "a697eb08d9326361a51c60429e90cb1d551638dca1aa88242317bc28cbf6d3d6",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-mvp-scope/templates/05-MVP范围.md",
       "sha256": "90690bfc1b2f4f7b3a47510e727b8bc7b5d2cb63f0994f429503b61fb18b1b74",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-mvp-scope/templates/AI能力与文档清单.md",
       "sha256": "854615f9279193ea0d937222cec83ad20cae8450717e8792e063e69b650c6f51",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-mvp-scope/templates/关键假设与验证计划.md",
       "sha256": "4ab09534ce40591d13cdbc16a7414496b0ec968069604102b6595906f8be2efa",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-poc-eval/SKILL.md",
       "sha256": "6591e8e4d1cff29789ad74764cc9140dc2c87c285c4718ce90a2296e2d737980",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-poc-eval/templates/09-POC与选型.md",
       "sha256": "c61bc6ba46ad3f4d349f2e42637959774e42addfd9bb54d64a0e483828a9b965",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-poc-eval/templates/组件与模型选型.md",
       "sha256": "60002be8e55cb2b9a6a29bb024def80ba332f869d34a2cdbdafd0989f8291b13",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-poc-eval/templates/调优实验记录.md",
       "sha256": "49c990bb42d3b7ddf1f0807550ce9d72c877193a422d0da2ac8ac925bb3f4253",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/SKILL.md",
       "sha256": "a32a03e9ace3133e192cabc223d5f4b484205f631257277960e24f95f1c3860b",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/01-概述与边界.md",
       "sha256": "6b451386089cb61174ec9208d48c2dfa34aec41448376175a7b9f6e43f79ace5",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/02-用户流程.md",
       "sha256": "d72c334b06ae29b3649c3da70fc500c30eef036c57603eb42f4f52107e067c66",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/03-信息架构.md",
       "sha256": "f717183df2776c1ae27072dcefd35c23a4db3aa83d0c338b51c272d9c61eae84",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/04-技术栈.md",
       "sha256": "a6b268fc625b41dd98b88b1e207b2caf1e1c177a053945ea464f3e43a9ccbdcd",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/05-数据模型.md",
       "sha256": "9c8ee6cc18af981441c3ee73dc328ca141eb4efe9e8ce66d38b59b3a8771f2ab",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/06-接口.md",
       "sha256": "fa3cdf21887e34c70f5b3a91fe2bb4c3589eadf08bcbe65c654e4a89b539ad80",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/07-UI与Design-Tokens.md",
       "sha256": "05feff860c9f1551b8dd6cac845c5e9dce7b750baf83a99f45aabfc47c74953e",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/08-状态与异常.md",
       "sha256": "7ed531fd8ae2afb91ad8fee4b173a8b562cb3e2478b11fbf7f963f9d5182b550",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/09-AI行为与兜底.md",
       "sha256": "893998e86116b339498a041b0f0c209341d83cc99547647de0e1e1d6d999ce8f",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/10-验收用例.md",
       "sha256": "2d3faeb38e4062ce8405140909354f68fed3cbfffc5fd51bf6cf154f772f88de",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-Agent规范/11-知识库与RAG数据.md",
       "sha256": "39f3920ca7a015d5731f71db43a7ec4b10c8cf81d0f6a121d71b535803500f02",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/00-文档信息.md",
       "sha256": "e998116a53335bd46d0e5ca1fe18b02d0bb4568ec3620482bf9945b96faa800e",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/01-背景与目标.md",
       "sha256": "185c1ab72a85224277ea74dee3f856afb98863cda077c30de5226e1aa5b7a7d4",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/02-用户与场景.md",
       "sha256": "afcba3a31bbb25b079b513c98472b0326ba07522ce5905d4a2c8fc7a2135e367",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/03-范围-含不做.md",
       "sha256": "8b404606916e8ae9a907c899e255d572588699d7b9a7d869e3bc2c990a9d6253",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/04-功能说明.md",
       "sha256": "4f9660946748e50782ca4c2808233a1f301a689df1f4901863d6b5081c326b3b",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/05-业务规则.md",
       "sha256": "28e181eac20a0611326ff5252b780e33ee9616e2acb4fdf71540ae167ef1c277",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/05b-角色和权限.md",
       "sha256": "f3484ea5b82afbf6a0e9b1b7a53bb36352405429ea25d379da3a9582b3f5fb57",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/06-流程与状态.md",
       "sha256": "c22ef10608307121c80f792a443814d2b120f670678306c7035c9e68453140cc",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/07-非功能.md",
       "sha256": "f94cd6daab4e570bd6f8d6ce27dfd66f9ec342c734c5dda6eb151713159de65c",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/08-AI能力与评测验收.md",
       "sha256": "66226778d2a392aef6233889e6d21a67704c5c0d3b865a79838faf29d62396b1",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/09-里程碑.md",
       "sha256": "67d579b7038bb315ca105db145fa916d92e12f51b49ff1f717d0bbdb0b4ef5a0",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/08-PRD/10-风险与开放问题.md",
       "sha256": "7c871de95eb2de58d00796cab7666136782c4f8801c07bef2e7c08da95563157",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/shared-decision-pack.md",
       "sha256": "86251dac3916c56dcb15c247903d60ffdb8972595b905079ee79b3bbffb7531e",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/产品总体设计.md",
       "sha256": "bc0d1e3267984ed98064c24437327f7f798b23e971cd48e94ecdb20cbc8d50f3",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/单功能需求.md",
       "sha256": "c532685d3faac5890e8816c0fc19dd037e2bec1dbeb9dd79c489bc1e1d71da4f",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/多语言Key表.md",
       "sha256": "46de72f8446a476c59b0df929d0b33594ba4a8fffa0a4ab643f3b919b3cff41e",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/数据埋点表.md",
       "sha256": "2eba6a1fef5f7bd0cc4a1b01bc2a82fac5f42b92835040b23ebed326fdd4706f",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/看板设计方案.md",
       "sha256": "7834e32f1c8afd236b6d9bf99b5881dd99b9c2921d8665a296a860c65843b5ca",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/立项决策一页纸.md",
       "sha256": "19dcf55024e93b2c4d024a57bb453ecc42f812dc3aba02f46f8210e46c2e3bbf",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-prd-dual/templates/需求变更与交接.md",
       "sha256": "772680b0710bfe30313ffb94e31fb6b62dd4aee4de7bc9d6cc77e69770feb159",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-problem-define/SKILL.md",
       "sha256": "5d2693f1d428a63c4fdb3ed7bf11b23c1e0fb5bb310102f8e03911dc191c2c65",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-problem-define/templates/01-问题定义卡.md",
       "sha256": "59c6071125c745e57a2e139c07e42cb43d9f458db69eb173689445baa0a7ec35",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-product-lifecycle/SKILL.md",
       "sha256": "7daaaf936aee174b1597ad965a2391eedb33b7559df636ea4c31497c28569ad1",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-product-lifecycle/templates/00-项目索引.md",
       "sha256": "34853bad989b5c04bd8b17ea3f6e0d7268982dd41bc8da40b4f4d779c924824d",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-product-lifecycle/templates/已确认决策表.md",
       "sha256": "ca35da3b18ab42d0f0fe9f5b8eb31a69cbe9c90c9d6d1392dbddc03852c2bf09",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-rag-requirements/SKILL.md",
       "sha256": "0674c0532403bd07cdf04930bcebdc72c996686dc147a3b597c148cd199b5f9e",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-rag-requirements/templates/RAG需求与架构.md",
       "sha256": "87e1b4bac89fb509f7444cb8b194d3a9847628bd4b0b43163c9a844c99be63fb",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-rag-requirements/templates/数据处理与入库.md",
       "sha256": "f22a7c0a8147ac892cf0d477666920773663688d303c06662f2d7c59572e9da1",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-rag-requirements/templates/检索与生成.md",
       "sha256": "5234a52d1e1e9b7c4e1b8e451a9dbfdfa796f6add3aa18be32c8ff8b18b8df88",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-rag-requirements/templates/知识来源与维护.md",
       "sha256": "39232cbb9adf0c291c8127435fc5e100b500836a470d5d1bf55b9980e18dece6",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-requirements-backlog/SKILL.md",
       "sha256": "9e7e6c38a3efbba47d7189badaadcb9ebac62a647dd5c34f9e225a7cfa9857ca",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-requirements-backlog/templates/03-需求池.md",
       "sha256": "9c3365027b16b15d7210ac0dc5a2e12f578b944a945bbae4e7ef1acf0c995edb",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-tech-risk-review/SKILL.md",
       "sha256": "00c65a8b7745348e97eca246538f6e6ba44cfbbcf44763927d79a819444e4bed",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/SKILL.md",
       "sha256": "514af679bf18891f4eb101b5a3363a6136abcd8f5b44ddb3e57b126c2178ec13",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-user-research/templates/02-用户研究.md",
       "sha256": "6cd1b5c5621a316d814dc3cc833770616be64d2d457a15ba9f907ea0bc3d33b8",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "qaqpm-user-research/templates/A-深度访谈.md",
       "sha256": "d5c24305265b4f3932be92f40c0495d793e687dbebe143316e9bfd0b99061df6",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/B-同任务走查.md",
       "sha256": "471610b6d3d87239718e432a8bfe0a30d67ecb436d72ff8c1add55a4037c8213",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/C-行为日志分析.md",
       "sha256": "ddc8a3037233040a8c03dd2bc8fc780bd81356409e2d503aa13da3f0f8ecdcf8",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/D-社交原声采集.md",
       "sha256": "847cf0b7c31a74d6ba161f844ba0bb27d4b64432ef5e9beef70b2d1ab3ad0c7d",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/E-问卷.md",
       "sha256": "8c45c20a59d0b1a388995c2debed61ba4c2b7372627c6ab7dbdbdb379168e6c0",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/F-专家访谈.md",
       "sha256": "0d5b71b4f587a513b9fef5fceff57b64b771dbb36be87655eb418d2c44f0e0ea",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/G-竞品体验走查.md",
       "sha256": "ee0c8ead131217ff62fbe261505cc2826a8c024c08b031a5dcd737a9af46edc3",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/H-桌面研究.md",
       "sha256": "59bae5995f1e9374aaea8cfd0c2ef047e2500a6f4d4c03a8e320bc7e2719e8f0",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/冷启动用户声音表.md",
       "sha256": "4e047ed9f6addaa5b985be8e91d0fb7b532df0c80a23612828178d326779badc",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/用户-场景-需求拆解.md",
       "sha256": "fdbb626c21d24ab7a1ab5ce8fd9eddf13d1ef3656a616be75aba4bdf58e8d348",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "qaqpm-user-research/templates/行业与领域调研.md",
       "sha256": "625ce4cdc52e9da559064058e99ba6b9c2f741308cd637a24a90bbf3c973b7c0",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     },
     {
       "path": "README.md",
       "sha256": "d1ad278ad92795b5b131dbb1a3d02280d9ad16f93ba95d6ebae020e52efe1ea6",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "ARCHITECTURE.md",
       "sha256": "d712a24844386557db4412cf37a9899dec3c1360c18a12496c26ada5622909fd",
-      "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "publication": "local-revision",
+      "published_commit": null
     },
     {
       "path": "LICENSE",
       "sha256": "b39c7878eb38dd767d63195c901d9b24a332998a187c60df2ab1f901e1a190da",
       "publication": "published",
-      "published_commit": "f45832cbf4abea8b6aabb2d4d09fcf91eb0f6a0a"
+      "published_commit": "c5407c19bd5869343bb60b6c1519dbbce79c1520"
     }
   ]
 }

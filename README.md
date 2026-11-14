@@ -48,11 +48,13 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 
 ## AI专题与文档模板
 
-目前共 **17 个 Skill**：总控、S1–S12、核心技术难题梳理和 3 个 AI 专题。共有 **84 个独立 Markdown 模板文件**（68 个字段模板、16 个章节骨架），另有 1 个 CSV 配套文件、1 个兼容旧名的跳转文件。17 个正文大纲入口和 13 份去重共享规则单独展示，不计入模板数。
+目前共 **17 个 Skill**：总控、S1–S12、核心技术难题梳理和 3 个 AI 专题。共有 **84 个独立 Markdown 模板文件**（68 个字段模板、16 个章节骨架），另有 1 个 CSV 配套文件、1 个兼容旧名的跳转文件。17 个正文大纲入口、13 份去重共享规则和 7 份 S4/S6 共用方法文档单独展示，不计入模板数。
 
 2026-11-14 补齐 [用户研究](./qaqpm-user-research/templates/02-用户研究.md)、[项目索引](./qaqpm-product-lifecycle/templates/00-项目索引.md)、[已确认决策表](./qaqpm-product-lifecycle/templates/已确认决策表.md) 和 [Bad case 记录](./qaqpm-dev-track/templates/Bad-case记录.md)，并校正各站交接、早期验证回流和验收字段。
 
 独立文件不等于完整报告或真实执行证据；具体覆盖与限制见 [文档资源类型与覆盖](./_shared/document-resource-guide.md)。
+
+竞品分析支持公开资料扫描、单功能研究和完整拆解。完整模式先完成约定范围内的体验取证，再做横比与判断；操作观察、技术推断和待补证事项分别记录。方法入口见 [S4/S6 共用拆解模块](./qaqpm-go-nogo/references/teardown-module.md)。
 
 - [阶段协作与适用规则](./_shared/ai-document-protocol.md)
 - [模板来源与提炼说明](./_shared/document-template-sources.md)
@@ -63,6 +65,8 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 
 ## 交互式网站
 
+[在线访问 QAQPM 架构与使用指南](https://perpperqaq.github.io/AIPM-QAQPM-Skills/)。
+
 [website/](./website/) 提供可探索架构、17 个 Skill 指南、教学案例、分类资源库与安装说明。模板支持搜索、预览、复制和下载；原文链接固定到内容提交版本。
 
 ```bash
@@ -71,7 +75,7 @@ npm ci
 npm run dev
 ```
 
-使用 `npm run build` 构建静态站点。运行、内容同步与浏览器检查说明见 [website/README.md](./website/README.md)。
+使用 `npm run build` 构建静态站点。推送 `main` 后，[Pages 工作流](./.github/workflows/deploy-pages.yml) 会从该提交重新生成资料目录并部署项目站点。运行、内容同步与浏览器检查说明见 [website/README.md](./website/README.md)。
 
 ## 安装
 

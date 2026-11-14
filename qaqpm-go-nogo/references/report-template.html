@@ -403,10 +403,13 @@ function slot(v,lb){return '<span class="slot"><span class="v">'+md(v||'—')+'<
 })();
 
 function scoring(sc){
-  var dims=arr(sc.dims),tot=0,max=0;dims.forEach(function(x){tot+=+x.score||0;max+=+x.max||0;});
+  var dims=arr(sc.dims);
+  var incomplete=dims.filter(function(x){return typeof x.score!=='number'||!Number.isFinite(x.score)||typeof x.max!=='number'||!Number.isFinite(x.max)||x.max<=0||x.score<0||x.score>x.max;});
+  if(incomplete.length)return '<div class="soft"><b>评分未完成</b><p>以下维度尚无有效分数：'+incomplete.map(function(x){return esc(x.name||'未命名维度');}).join('、')+'。本报告不补零、不计算完整总分或评级。</p>'+(sc.note?'<p class="small muted">'+md(sc.note)+'</p>':'')+'</div>';
+  var tot=0,max=0;dims.forEach(function(x){tot+=x.score;max+=x.max;});
   var pct=max?tot/max*100:0;
-  var bands=arr(sc.bands).length?sc.bands:[{min:90,text:'稳定产出高质量结果'},{min:70,text:'流程通顺，少量人工干预后效果不错'},{min:60,text:'有明显断档，适合创意启发和草稿'},{min:0,text:'无法完整交付'}];
-  var band=bands.slice().sort(function(a,b){return b.min-a.min;}).filter(function(b){return pct>=b.min;})[0]||{text:''};
+  var bands=arr(sc.bands).filter(function(b){return typeof b.min==='number'&&Number.isFinite(b.min)&&typeof b.text==='string'&&b.text.length;});
+  var band=bands.slice().sort(function(a,b){return b.min-a.min;}).filter(function(b){return pct>=b.min;})[0];
   var n=dims.length,S=440,cx=S/2,cy=S/2+6,R=128,svg='<svg viewBox="0 0 '+S+' '+(S+10)+'" width="100%" role="img" aria-label="测评雷达图">';
   function P(i,r){var a=-Math.PI/2+i*2*Math.PI/n;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];}
   for(var k=1;k<=4;k++){var pp=[];for(var i=0;i<n;i++)pp.push(P(i,R*k/4).join(','));svg+='<polygon points="'+pp.join(' ')+'" fill="'+(k===4?'#fafaf8':'none')+'" stroke="#e2e2de" stroke-width="1"/>';}
@@ -422,7 +425,7 @@ function scoring(sc){
   return (sc.scenario?'<p class="small" style="margin-top:-4px"><b>测试场景：</b>'+md(sc.scenario)+'</p>':'')+
    '<div class="score"><div class="radar">'+svg+'<div class="badge"><div class="s">'+Math.round(tot*10)/10+'</div><div class="m">/ '+max+' 分</div></div></div>'+
    '<div><table class="tbl"><thead><tr><th>层级</th><th>维度</th><th></th><th>得分</th></tr></thead><tbody>'+rows+'</tbody></table>'+
-   '<div class="band"><span class="tag">评级</span> '+esc(band.text)+(sc.ev?chip(sc):'')+'</div>'+(sc.note?'<p class="small muted">'+md(sc.note)+'</p>':'')+'</div></div>';
+   (band?'<div class="band"><span class="tag">评级</span> '+esc(band.text)+(sc.ev?chip(sc):'')+'</div>':'')+(sc.note?'<p class="small muted">'+md(sc.note)+'</p>':'')+'</div></div>';
 }
 
 /* ---------- 03 ---------- */

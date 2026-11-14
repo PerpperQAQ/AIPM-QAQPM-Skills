@@ -64,7 +64,7 @@ qaqpm_handoff:
 | S1 | `problem_one_liner`, `ai_fit: yes\|no\|partial\|tbd`, `scene_elements` |
 | S2 | `research_methods: [A-H]`, `evidence_strength: high\|mid\|low`, `quotes_index_path`, `user_scene_need_rows`, `pending_eval_count`, `written_to_s3: bool` |
 | S3 | `backlog_count`, `p0_ids: []`, `mirror_row_count`, `bitable_row_count` |
-| S4 | `diff_one_liner`, `competitor_types_covered: []`, `counter_argument_done: bool` |
+| S4 | `diff_one_liner`, `competitor_types_covered: []`, `counter_argument_done: bool`；按需增量 `analysis_mode: scan\|feature\|full_teardown`, `experience_records_path`, `teardown_appendix_path`, `unverified_items: []` |
 | S5 | `mvp_must: []`, `mvp_wont: []`, `pass_fail_criteria` |
 | S6 | `decision_tier`, `stop_loss`, `teardown_appendix_path`, `verify_calendar` |
 | S7 | `eval_goal`, `dimensions: []`, `gold_set_v0_path`, `gate_rules_draft`, `storage_mode`, `eval_bitable_url`, `eval_md_mirror_path` |
@@ -73,6 +73,8 @@ qaqpm_handoff:
 | S10 | `scope_drift: []`, `regression_eval_runs: []`, `bad_case_bitable_url`, `bad_case_md_mirror_path` |
 | S11 | `func_test_pass: bool`, `ai_eval_pass: bool`, `gate_result`, `func_case_bitable_url`, `func_case_md_mirror_path` |
 | S12 | `release_mode: gray\|ab\|full`, `backflow_to_backlog: []` |
+
+S4 的增量字段向后兼容：旧交接缺字段时从真实材料补充，不重做前序站。`experience_records_path` 指向逐产品状态、任务记录、异常覆盖与证据索引，`teardown_appendix_path` 指向完整拆解附录或索引；可用真实文件或章节链接。各产品的亲测、用户实际记录、二手材料和待补证分别说明，不能从路径非空、已请求截图或 `counter_argument_done` 推断实测完成。单功能不强制五层，待验证判断进入 `unverified_items`。
 
 ## 3. 继承规则
 
