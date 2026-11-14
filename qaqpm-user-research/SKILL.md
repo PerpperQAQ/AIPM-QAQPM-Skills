@@ -63,6 +63,8 @@ Mom Test：问生活与做过的事，不让人评价你的想法。
 | 潜在 | 是否真有问题、现有凑合 | 最近一次遇到【问题】怎么处理的？花了多久？有没有找人帮忙？ |
 
 ## 5. 方法与模板库
+研究汇总使用 [02-用户研究](templates/02-用户研究.md)，方法执行记录仍用原 A–H 模板；汇总只记录实际研究与证据，不因填写模板宣称已执行。
+
 见 `templates/A`…`H`；总览 `_shared/research-methods.md`。  
 - 访谈表头／记录纪律：`A-深度访谈.md` + `references/interview-transcript-conventions.md`  
 - 问卷结构范例：`E-问卷.md`  

@@ -43,7 +43,7 @@ S7 门禁与黄金集（飞书模式以评测集多维表冻结视图＋本地�
 P0 确认门禁版本与 storage_mode → P1 **飞书模式**：建/更新功能验收用例多维表与视图并镜像 → 执行功能测试 → P2 AI 评测执行（可 AI 裁判但须校准记录）→ P3 归因（失败可回写 Bad case 表）→ P4 报告与放行建议 → P5 交接。
 
 ## 5. 模板
-`templates/11-验收与评测报告.md`（含两套表）；飞书细节见 `_shared/feishu-doc-protocol.md` §3.4。
+`templates/11-验收与评测报告.md`（含两套表）；失败归因和复验续用 [S10 Bad case 模板](../qaqpm-dev-track/templates/Bad-case记录.md) 对应的已有台账；飞书细节见 `_shared/feishu-doc-protocol.md` §3.4。
 
 ## 6. 输出大纲
 必填：存储形态与多维表 URL（飞书时）、环境与版本、功能测试表、AI 评测数据、典型案例、门禁结论、下一步。

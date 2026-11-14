@@ -48,7 +48,11 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 
 ## AI专题与文档模板
 
-目前共17个Skill：总控、S1–S12、核心技术难题梳理和3个AI专题。本次新增31份Markdown模板及1份运行Case CSV配套，补齐Agent、RAG、AIGC以及行业调研、功能分析、总体设计、埋点、看板、多语言、变更交接等材料。
+目前共 **17 个 Skill**：总控、S1–S12、核心技术难题梳理和 3 个 AI 专题。共有 **84 个独立 Markdown 模板文件**（68 个字段模板、16 个章节骨架），另有 1 个 CSV 配套文件、1 个兼容旧名的跳转文件。17 个正文大纲入口和 13 份去重共享规则单独展示，不计入模板数。
+
+2026-11-14 补齐 [用户研究](./qaqpm-user-research/templates/02-用户研究.md)、[项目索引](./qaqpm-product-lifecycle/templates/00-项目索引.md)、[已确认决策表](./qaqpm-product-lifecycle/templates/已确认决策表.md) 和 [Bad case 记录](./qaqpm-dev-track/templates/Bad-case记录.md)，并校正各站交接、早期验证回流和验收字段。
+
+独立文件不等于完整报告或真实执行证据；具体覆盖与限制见 [文档资源类型与覆盖](./_shared/document-resource-guide.md)。
 
 - [阶段协作与适用规则](./_shared/ai-document-protocol.md)
 - [模板来源与提炼说明](./_shared/document-template-sources.md)
@@ -56,6 +60,18 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 - [运行Case记录](./qaqpm-eval-design/templates/测试Case记录.md)
 
 标准、题集、运行Case和分析继续复用现有评测目录。单文档请求直接完成该范围；未采用的组件或模态不创建空包。文档成熟度、模型选择、链路验证和产品验收分别记录。
+
+## 交互式网站
+
+[website/](./website/) 提供可探索架构、17 个 Skill 指南、教学案例、分类资源库与安装说明。模板支持搜索、预览、复制和下载；原文链接固定到内容提交版本。
+
+```bash
+cd website
+npm ci
+npm run dev
+```
+
+使用 `npm run build` 构建静态站点。运行、内容同步与浏览器检查说明见 [website/README.md](./website/README.md)。
 
 ## 安装
 
@@ -92,7 +108,8 @@ AIPM-QAQPM-Skills/
 ├── qaqpm-product-lifecycle/
 ├── qaqpm-problem-define/
 ├── …（S2–S12 各站）
-└── qaqpm-launch-observe/
+├── qaqpm-launch-observe/
+└── website/（交互式架构、指南、案例与资源库）
 ```
 
 不含课件原文、飞书私有全文或个人日记。

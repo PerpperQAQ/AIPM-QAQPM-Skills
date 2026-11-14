@@ -45,6 +45,11 @@
 | W2 | | | |
 
 ## 交接区
+
+**接手后第一步**：<具体材料、动作与本轮返回站>。
+
+本轮新增确认／未完成与阻塞／负责人：
+
 ```yaml
 qaqpm_handoff:
   station: "S5"
@@ -79,6 +84,5 @@ AI能力与文档清单、适用专题首稿及成熟度引用；无AI则说明�
 
 首稿完成要求：用户任务、核心输入输出、主要流程、范围和验证动作明确；技术参数可待选并写依据。早期验证调用S7/S9后返回S5/S6，不能自动跳到开发。
 
-接手后第一步：
 
 交接按需追加`ai_document_index_path`、`capability_ids`、`document_maturity: mvp_draft`、`validation_plan_path`；已有05文件名和历史字段保持兼容。
