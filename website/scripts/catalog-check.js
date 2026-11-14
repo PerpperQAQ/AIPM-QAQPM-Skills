@@ -1,0 +1,52 @@
+async (page)=>{
+ const checks=[],errors=[];const check=(v,n)=>{checks.push({name:n,pass:!!v})};
+ page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto('http://127.0.0.1:4175/');await page.setViewportSize({width:1440,height:1000});
+ const kinds=page.getByRole('group',{name:'参考资料类型'});const station=page.getByRole('group',{name:'模板分类'});
+ const search=page.getByRole('textbox',{name:'搜索模板'});
+ for(const title of ['00-项目索引','02-用户研究','已确认决策表','Bad-case记录']){
+  await search.fill(title);check(await page.locator('.template-card').count()===1,'New template indexed: '+title);
+  await page.locator('.template-card').click();await page.locator('.markdown h1').waitFor();
+  check((await page.getByRole('dialog').textContent()).includes('已发布来源'),'Published source status: '+title);
+  check(await page.getByRole('dialog').getByRole('link',{name:'GitHub 原文'}).count()===1,'Published GitHub source link: '+title);
+  check((await page.locator('.markdown').textContent()).length>600,'Substantive template: '+title);
+  const href=await page.getByRole('dialog').getByRole('link',{name:'下载原文件'}).getAttribute('href');
+  const resp=await page.request.get(new URL(href,page.url()).href);check(resp.ok(),'Local template download: '+title);
+  await page.keyboard.press('Escape');
+ }
+ await search.fill('');await kinds.getByRole('button',{name:/正文大纲/}).click();
+ check((await page.locator('.result-count').textContent()).includes('17'),'17 outline entries');
+ await station.getByRole('button',{name:'总控',exact:true}).click();await page.locator('.template-card').click();
+ await page.locator('.markdown h2').waitFor();check((await page.locator('.markdown').textContent()).startsWith('6. 输出文档大纲'),'Outline section excerpt');
+ check(!(await page.locator('.markdown').textContent()).includes('Phase 0 开场'),'Outline does not render entire Skill');
+ await page.keyboard.press('Escape');
+ await station.getByRole('button',{name:'所有站点'}).click();await kinds.getByRole('button',{name:/共享规则/}).click();
+ check((await page.locator('.result-count').textContent()).includes('13'),'13 unique shared rules');
+ await search.fill('文档资源');await page.locator('.template-card').click();await page.locator('.markdown h1').waitFor();
+ check((await page.locator('.markdown').textContent()).includes('正文大纲'),'Shared rule preview');await page.keyboard.press('Escape');
+ await search.fill('');await kinds.getByRole('button',{name:/配套文件/}).click();
+ check(await page.locator('.template-card').count()===1,'CSV counted separately');await page.locator('.template-card').click();
+ await page.locator('.markdown pre').waitFor();check((await page.locator('.markdown pre').textContent()).includes(','),'CSV preview');await page.keyboard.press('Escape');
+ await kinds.getByRole('button',{name:/独立模板/}).click();await station.getByRole('button',{name:'PRD 与交接'}).click();
+ check((await page.locator('.result-count').textContent()).includes('30'),'S8 excludes legacy redirect');
+ await search.fill('概述与边界');check((await page.locator('.template-card').textContent()).includes('章节骨架'),'Skeleton depth visible');
+ await page.locator('.template-card').click();await page.locator('.markdown h1').waitFor();
+ check((await page.locator('.document-provenance').textContent()).includes('章节骨架'),'Skeleton preview note');await page.keyboard.press('Escape');
+ await search.fill('');await station.getByRole('button',{name:'所有站点'}).click();
+ await page.locator('#templates').scrollIntoViewIfNeeded();await page.screenshot({path:'output/playwright/catalog-desktop.png'});
+ await page.setViewportSize({width:390,height:844});await page.locator('#templates').scrollIntoViewIfNeeded();
+ check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile catalog has no horizontal overflow');
+ await page.screenshot({path:'output/playwright/catalog-mobile.png'});
+ await page.getByRole('navigation',{name:'Skill 指南'}).getByRole('button',{name:'CTRL 产品全流程'}).click();
+ await page.locator('.guide-detail h3').filter({hasText:'产品全流程'}).waitFor();
+ check(await page.locator('.guide-detail .resource-kind.independent-template').count()===1,'Controller independent templates available');
+ check(await page.locator('.guide-detail .resource-kind.outline').count()===1,'Controller outline available');
+ check(await page.locator('.guide-detail .resource-kind.shared-rule').count()===1,'Controller shared rules available');
+ await page.locator('.related-templates').screenshot({path:'output/playwright/guide-resources-mobile.png'});
+ await page.getByRole('navigation',{name:'Skill 指南'}).getByRole('button',{name:'RISK 核心技术难题'}).click();
+ await page.locator('.guide-detail h3').filter({hasText:'核心技术难题'}).waitFor();
+ check(await page.locator('.guide-detail .resource-kind.independent-template').count()===0,'Risk does not invent independent template');
+ check((await page.locator('.guide-detail .related-templates').textContent()).includes('目前未设置独立模板'),'Risk explains outline-based delivery');
+ await page.setViewportSize({width:1440,height:1000});await page.locator('#templates').scrollIntoViewIfNeeded();
+ return {passed:checks.filter(c=>c.pass).length,failures:checks.filter(c=>!c.pass),errors,checks};
+}
