@@ -4,8 +4,8 @@ import { aiTopics, executionGuides, kitRepo, kitStages } from './execution-guide
 
 export function ExecutionSteps({ code }) {
   const guide = executionGuides[code];
-  return <section className="execution-section" aria-labelledby="execution-heading">
-    <div className="guide-section-heading"><h4 id="execution-heading">具体执行步骤</h4><span>{guide.steps.length} 步 · 按本次范围执行</span></div>
+  return <section className="execution-section" aria-label="具体执行步骤">
+    <p className="guide-block-summary">{guide.steps.length} 个步骤 · 按本次范围执行，每步保留相应产出。</p>
     {guide.note && <p className="guide-context-note">{guide.note}</p>}
     <ol className="execution-steps">{guide.steps.map((step, i) => <li key={step.title}>
       <span className="step-number mono">{String(i + 1).padStart(2, '0')}</span>
@@ -16,8 +16,8 @@ export function ExecutionSteps({ code }) {
 
 export function Deliverables({ skill, onDocument }) {
   const guide = executionGuides[skill.code];
-  return <section className="deliverables-section" aria-labelledby="deliverables-heading">
-    <div className="guide-section-heading"><h4 id="deliverables-heading">会产出哪些文档</h4><span>文件 · 用途 · 适用条件</span></div>
+  return <section className="deliverables-section" aria-label="会产出哪些文档">
+
     <p className="resource-guide-note">以下是交付结构，沿用项目已有路径；小项目可以合订。模板是填写起点，真实研究、实验和验收证据需要实际取得。</p>
     <ul className="deliverable-list">{guide.docs.map(d => <li key={d.name}>
       <div className="deliverable-title"><code>{d.name}</code><span>{d.condition}</span></div>
