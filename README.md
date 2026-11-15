@@ -14,7 +14,7 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 |---|---|---|
 | 总控 | [`qaqpm-product-lifecycle`](./qaqpm-product-lifecycle/) | 定当前站、路由子 Skill、维护 `00-项目索引`、HTML 壳 |
 | 主链 S1–S12 | `qaqpm-*` 各站目录 | 问题→调研→需求池→竞品→MVP→立项→**评测集**→双轨 PRD→POC→开发→验收→上线 |
-| AI专题（S5启动，可独立调用） | [Agent](./qaqpm-agent-requirements/)、[RAG](./qaqpm-rag-requirements/)、[AIGC](./qaqpm-aigc-requirements/) | 需求首稿、流程、工具、知识、素材与产物；S8沿用同一文档细化 |
+| S8 下的 AI 需求模块 | [Agent](./qaqpm-agent-requirements/)、[RAG](./qaqpm-rag-requirements/)、[AIGC](./qaqpm-aigc-requirements/) | S5 可启动首稿，S8 沿用同一文档细化到开发交接；按能力组合，也可独立调用 |
 | 跨站专项 | [核心技术难题梳理](./qaqpm-tech-risk-review/SKILL.md) | 用 `$qaqpm-tech-risk-review` 找出会改变架构、首版范围或产品承诺的难题，并设计最小验证。 |
 | 公共件 | [`_shared/`](./_shared/) | 标签、交接 schema、调研菜单 A–H、HTML / Archify 约定、示例索引 |
 
@@ -38,13 +38,68 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 | S5 | `qaqpm-mvp-scope` | 首版怎样形成闭环，哪些假设要先验证？ | `05-MVP范围.md`＋适用AI专题首稿 |
 | S6 | `qaqpm-go-nogo` | 值不值得投入？（含拆解） | `06-立项报告.md` |
 | S7 | `qaqpm-eval-design` | 怎么量好坏？黄金集从哪来？ | `07` + `eval/` |
-| S8 | `qaqpm-prd-dual` | 怎么做、怎么算完？ | `08-PRD/` + `08-Agent规范/` |
+| S8 | `qaqpm-prd-dual` | 怎么做、怎么算完？ | `08-PRD/` + `08-Agent规范/`（开发与接口约定）＋适用 Agent／RAG／AIGC 需求 |
 | S9 | `qaqpm-poc-eval` | 关键能力是否可行？ | `09` + 技术链路 HTML |
-| S10 | `qaqpm-dev-track` | 如何落地并防回退？ | `10-开发推进记录.md` |
+| S10 | `qaqpm-dev-track` | 如何接入开发仓库、分阶段实现并验证？ | `10-开发推进记录.md`＋`dev/开发接入.md`＋工程阶段文档与证据 |
 | S11 | `qaqpm-acceptance` | 功能通了吗，效果达标吗？ | `11-验收与评测报告.md` |
 | S12 | `qaqpm-launch-observe` | 灰度 / 观察 / 回流？ | `12-上线观察.md` |
 
 更完整的目录约定、路由分支、评测分工、双轨 PRD 与 HTML 规范见 **[ARCHITECTURE.md](./ARCHITECTURE.md)**。
+
+### S8 与三个 AI 需求模块的关系
+
+[S8「需求细化与开发交接」](./qaqpm-prd-dual/SKILL.md)负责完整 PRD、开发与接口约定，以及产品实际采用的 AI 能力需求。Agent、RAG、AIGC 是其中可按需调用的三个需求模块，保留独立 Skill，方便组合使用或只补一份文档；它们不增加 S1–S12 之外的阶段编号。
+
+| 模块 | 负责什么 | 主要文档 |
+|---|---|---|
+| [Agent 需求](./qaqpm-agent-requirements/SKILL.md) | 用户任务、自主决策、节点协作、工具与上下文 | `Agent需求.md`、`节点与协作.md`、`Tool-List.md`、`Prompt与上下文.md` |
+| [RAG 需求与架构](./qaqpm-rag-requirements/SKILL.md) | 知识来源与权限、离线入库、在线检索与生成、引用与无答案处理 | `RAG需求与架构.md`、`知识来源与维护.md`、`数据处理与入库.md`、`检索与生成.md` |
+| [AIGC 需求](./qaqpm-aigc-requirements/SKILL.md) | 生成／编辑任务、素材与参数、预览修改、异步状态与产物交付 | `AIGC需求.md`、`任务与模态矩阵.md`、`生成与编辑流程.md`、`Prompt素材与参数.md` |
+
+- **S5 启动首稿**：说清实际能力、输入输出、核心流程、范围与待验证假设，按需要调用 S7／S9 验证。
+- **S8 继续细化**：沿用同一份权威文档，补齐规则、接口、数据、权限、状态、异常和验收引用，形成开发交接版。
+- **单独调用**：已有项目可直接补所需模块；没有首稿时按当前资料创建，无须补做历史阶段。未采用的能力不建空文档。
+
+`08-Agent规范/` 是给**编码 Agent**阅读的开发与接口约定；产品内部的 Agent 行为由 `qaqpm-agent-requirements` 描述。完整规则见 [AI 文档协作协议](./_shared/ai-document-protocol.md)。
+
+## S10：从产品资料接入开发仓库
+
+[S10「开发执行」](./qaqpm-dev-track/SKILL.md)使用指定的 [QAQPMskill-idea-to-launch-kit 开发流程仓库](https://github.com/PerpperQAQ/QAQPMskill-idea-to-launch-kit)。QAQPM 提供产品范围、需求与验收依据；开发仓库提供 `AGENTS.md` 规则、技术手册、`kit.sh` 阶段管理和 `verify.sh` 自检。Agent 读取并执行实际规则，按阶段完成文档、代码与验证。
+
+### 接入与执行顺序
+
+1. **读取现状**：核对项目索引、S8 PRD 与 AI 需求、S7 标准／题集、S9 选型结论，以及已有代码、技术栈和未提交改动。
+2. **首次接入**：说明仓库用途和实际存放路径，获得确认后由 Agent 拉取指定 fork；同一项目、同一位置已有明确授权时直接执行。核对 origin、实际提交和关键文件，在 PM 项目中填写 [`dev/开发接入.md`](./qaqpm-dev-track/templates/开发接入.md)，关联产品目录与需求、评测、选型来源。
+3. **继续已有项目**：读取接入记录，核对绑定路径、流程基线、工作区变化和当前阶段，复用现有仓库；不重复下载或自动更新。新产品使用 `projects/<产品名>/`；已有工程先核对路径和验证命令的兼容性，需要适配时明确映射与待完成项。
+4. **逐阶段执行**：读取 `AGENTS.md`、当前阶段与相关手册，取得阶段任务；先写当前子阶段技术文档，再实现、运行自检并补充真实验证证据。
+5. **验收与交接**：自检和补充核查通过、用户明确验收当前阶段后，才推进下一阶段。相关实现与联调完成后交 S11 做功能与 AI 效果准入；S12 在准入及发布授权范围内接续部署与观察。
+
+### 开发仓库的六个阶段
+
+仓库阶段 0–5 是工程执行编号，与产品流程 S1–S12 分属不同层级；阶段 2／3 可拆成多个子阶段。
+
+| 仓库阶段 | 工作与主要产出 | QAQPM 衔接 |
+|---|---|---|
+| 0 · PRD 体检 | 继承已确认需求，补当前实施缺口，产出 PRD 补全清单和核查记录 | S10 接入 |
+| 1 · 技术适配 | 引用 S9 选型，写技术适配声明、采纳／偏差与子阶段规划 | S10 接入 |
+| 2 · 后端与 Agent 核心 | 按子阶段产出技术文档、后端代码、API／恢复测试与适用的真实模型冒烟证据 | S10 实现 |
+| 3 · 正式前端与联调 | 确认视觉与交互，产出前端、移动适配、真实联调与端到端验证证据 | S10 → S11 |
+| 4 · 部署上线 | 准备目标环境、数据与登录边界、地址和回滚，产出部署与线上验证证据 | S11 准入后，由 S12 按授权执行 |
+| 5 · 工程收尾 | 整理产品 README、运行说明、项目状态和凭证依赖／到期事项 | S12 或本地交付收尾 |
+
+Agent 在已绑定的开发仓库根目录执行以下循环。`product_name` 和有分支时的 `next_stage` 使用实际绑定值；单一下一阶段可省略最后参数。
+
+```bash
+bash kit.sh 任务 "$product_name"
+# 完成当前阶段的文档、实现与证据后：
+bash kit.sh 自检 "$product_name"
+# 自检及补充核查通过，并已有用户对本阶段的明确验收后：
+bash kit.sh 通过 "$product_name" "$next_stage"
+```
+
+`docs/本阶段任务.md`、`docs/流程状态.txt`、`docs/流程历史.txt` 由脚本维护。S10 用 `10-开发推进记录.md` 引用真实阶段、版本、证据与待验项；自检成功仍需核查实际结果，不能代替 S11 的功能／AI 效果准入。S11 准入不自动授权部署；只交付本地产品时，在适用验收与收尾后结束。
+
+详细的拉取命令、已有工程适配、阶段推进与证据规则见 [开发流程仓库接入协议](./_shared/development-kit-protocol.md)。
 
 ## AI专题与文档模板
 
@@ -67,7 +122,7 @@ AI 产品交付的是**结果与门禁**，不是功能清单堆砌。本仓库�
 
 [在线访问 QAQPM 架构与使用指南](https://perpperqaq.github.io/AIPM-QAQPM-Skills/)。
 
-[website/](./website/) 提供可探索架构、17 个 Skill 指南、教学案例、分类资源库与安装说明。模板支持搜索、预览、复制和下载；原文链接固定到内容提交版本。
+[website/](./website/) 提供可探索架构、17 个 Skill 的输入材料／执行步骤／产出文档／完成条件／交接指南、教学案例、分类资源库与安装说明。指南将三个 AI 需求模块收在 S8 下，并展开 S9 报告生成与 S10 开发仓库流程。模板支持搜索、预览、复制和下载；原文链接固定到内容提交版本。
 
 ```bash
 cd website
