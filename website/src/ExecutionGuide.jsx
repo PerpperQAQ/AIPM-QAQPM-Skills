@@ -1,6 +1,62 @@
-import React from 'react';
-import { ArrowUpRight, FileText } from '@phosphor-icons/react';
+import React, { useState, useRef, useEffect } from 'react';
+import { ArrowUpRight, FileText, Copy, Check } from '@phosphor-icons/react';
 import { aiTopics, executionGuides, kitRepo, kitStages } from './execution-guide';
+import { stationMeta } from './architecture-data';
+
+export function StationMetaBar({ skill }) {
+  const meta = stationMeta[skill.code];
+  const [copied, setCopied] = useState(false);
+  const timer = useRef();
+  useEffect(() => () => clearTimeout(timer.current), []);
+  if (!meta) return null;
+
+  async function copyId() {
+    try {
+      await navigator.clipboard.writeText('$' + skill.id);
+      setCopied(true);
+      clearTimeout(timer.current);
+      timer.current = setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // ignore clipboard errors
+    }
+  }
+
+  return (
+    <dl className="station-meta-grid" aria-label="Skill 架构属性">
+      <div>
+        <dt>调用 ID</dt>
+        <dd className="station-id-row">
+          <code className="mono">${skill.id}</code>
+          <button
+            type="button"
+            className="mini-copy-btn"
+            onClick={copyId}
+            aria-label={`复制 $${skill.id}`}
+          >
+            {copied ? <Check /> : <Copy />}
+            <span>{copied ? '已复制' : '复制'}</span>
+          </button>
+        </dd>
+      </div>
+      <div>
+        <dt>所属架构层</dt>
+        <dd>{meta.layer}</dd>
+      </div>
+      <div>
+        <dt>上游读取</dt>
+        <dd>{meta.upstream}</dd>
+      </div>
+      <div>
+        <dt>交接增量字段</dt>
+        <dd><code className="mono">{meta.handoffFields}</code></dd>
+      </div>
+      <div className="station-meta-wide">
+        <dt>存储载体与可视化输出</dt>
+        <dd>{meta.carrier}</dd>
+      </div>
+    </dl>
+  );
+}
 
 export function ExecutionSteps({ code }) {
   const guide = executionGuides[code];
